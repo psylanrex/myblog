@@ -1,0 +1,126 @@
+
+nav.main-nav {
+  margin: 20px 0;
+  p {
+    a {
+      &.is-primary-green {
+        color: $primary-green;
+        font-weight: bold;
+      }
+      &.is-logo-text {
+        color: #222324;
+        font-size: large;
+        font-weight: bold;
+        font-family: 'Quicksand', sans-serif;
+      }
+    }
+  }
+}
+.hero {
+  background-image: url(/images/finance-business-adjusted.jpg);
+  background-size: cover;
+
+  .hero-body {
+    .hero-content-wrapper {
+      min-height: 500px;
+
+      .hero-content {
+        margin-top: 20em;
+        h1 {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  .services {
+    .card {
+      box-shadow: none;
+      .card-header {
+        padding: 20px;
+        &.services-header {
+          background-color: $primary-green;
+        }
+        .service-title {
+          text-align: center;
+          margin: auto;
+          h2 {
+            font-family: 'Quick Sand', sans-serif;
+            color: #ffffff;
+          }
+        }
+      }
+      .card-content {
+        .inner-card-service {
+          .card-header {
+            .card-header-wrapper {
+              margin: auto;
+              .card-header-title-icon {
+                text-align: center;
+              }
+              .card-header-title-text {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .process {
+    .process-wrapper {
+      background-color: $primary-green;
+      margin: 0 auto;
+      padding-top: 15px;
+      .process-left {
+        margin-top: 28%;
+        color: #ffffff;
+        .process-left-heading {
+          text-transform: uppercase;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 1.3em;
+          font-weight: bold;
+        }
+      }
+      .process-right {
+        .process-section {
+          .process-section-heading {
+            position: relative;
+            text-transform: uppercase;
+            font-family: 'Quicksand', sans-serif;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding-left: 32px;
+            margin-bottom: 4px;
+            &:before {
+              content: '';
+              background-color: #ffffff;
+              border-radius: 50%;
+              height: 14px;
+              width: 14px;
+              margin-right: 24px;
+              position: absolute;
+              left: -6px;
+              top: 5px;
+            }
+          }
+          .process-section-body {
+            padding: 24px 0 64px 32px;
+            border-left: 1px solid #ffffff;
+            margin-bottom: 4px;
+            .step-title {
+              color: #ffffff;
+              font-size: 1.2em;
+            }
+            .step-subtitle {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
