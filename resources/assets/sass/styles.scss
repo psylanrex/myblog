@@ -17,9 +17,11 @@ nav.main-nav {
   }
 }
 .hero {
-  background-image: url(/images/finance-business-adjusted.jpg);
+  background-image: url(/images/business-sit-ipad-1080x721.jpg);
   background-size: cover;
-
+  .overlay {
+    background-color: rgba(64,64,64,0.6);
+  }
   .hero-body {
     .hero-content-wrapper {
       min-height: 500px;
@@ -28,12 +30,83 @@ nav.main-nav {
         margin-top: 20em;
         h1 {
           color: white;
+          font-family: 'Quicksand', sans-serif;
+          font-weight: bold;
         }
       }
     }
   }
 }
+.qualities {
+  background-image: url('/images/business-building-bridge-cropped-643x350.jpg');
+  margin-bottom: 13px;
+  margin-top: -20px;
+  min-height: 350px;
+  .qualities-wrapper {
+    width: 75%;
+    margin: auto;
+    .qualities-wrapper-overlay {
+      background-color: rgba(245,245,245,0.7);
+      .qualities-column {
+        background-color: transparent;
+        .qualities-content-wrapper {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+.about-us {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  .about-us-left {
+    background-color: $primary-green;
+    .about-us-left-content {
+      padding: 30%;
+      p {
+        color: #FFFFFF;
+        &:first-letter {
+          font-family: 'Monoton', cursive;
+          font-size: 2em;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .about-us-right {
+    .about-us-right-content {
+      padding: 25px;
+      .card {
+        box-shadow: none;
+        .card-header {
+          box-shadow: none;
+          .about-us-card-header-title {
+            margin: auto;
+            text-align: center;
+            h2 {
+              color: $primary-green;
+              font-family: 'Quicksand', sans-serif;
+            }
+            hr#about-us-divider {
+              background-color: $primary-green;
+              width: 70%;
+              margin: auto;
+              margin-bottom: 25px;
+            }
+          }
+        }
+        .card-content {
+          .content {
+            .about-us-content-wrapper {
+              text-align: center;
+            }
+          }
+        }
 
+      }
+    }
+  }
+}
 .main-content {
   .services {
     .card {
@@ -41,27 +114,50 @@ nav.main-nav {
       .card-header {
         padding: 20px;
         &.services-header {
-          background-color: $primary-green;
+          background-color: #FFFFFF;
+          box-shadow: none;
         }
         .service-title {
           text-align: center;
           margin: auto;
           h2 {
-            font-family: 'Quick Sand', sans-serif;
-            color: #ffffff;
+            font-family: 'Quicksand', sans-serif;
+            color: $primary-green;
           }
         }
       }
       .card-content {
         .inner-card-service {
           .card-header {
+            background-color: $primary-green;
+            border-radius: 10px;
             .card-header-wrapper {
               margin: auto;
+              color: #ffffff;
               .card-header-title-icon {
                 text-align: center;
               }
               .card-header-title-text {
                 text-align: center;
+              }
+            }
+          }
+          .card-content {
+            .content {
+              ul {
+                width: 100%;
+                margin: auto;
+                li {
+                  list-style: none;
+                  span.service-list-icon {
+                    font-size: 0.5em;
+                    color: $primary-green;
+                    i.fa-star {
+                      margin-top: 7px;
+                      margin-left: -14px;
+                    }
+                  }
+                }
               }
             }
           }
