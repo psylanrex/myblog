@@ -13892,15 +13892,21 @@ label.panel-block:hover {
 }
 
 nav.main-nav {
-  margin: 20px 0;
+  margin: 20px 0 0 0;
 }
 
-nav.main-nav p a.is-primary-green {
+nav.main-nav .menu-item-wrapper {
+  margin: 0 10px;
+  border-bottom: 7px solid #ccffcc;
+  padding-bottom: 12px;
+}
+
+nav.main-nav .menu-item-wrapper p a.is-primary-green {
   color: #86ab6a;
   font-weight: bold;
 }
 
-nav.main-nav p a.is-logo-text {
+nav.main-nav .menu-item-wrapper p a.is-logo-text {
   color: #222324;
   font-size: large;
   font-weight: bold;
@@ -13930,55 +13936,18 @@ nav.main-nav p a.is-logo-text {
   font-weight: bold;
 }
 
-.qualities {
-  background-image: url("/images/business-building-bridge-cropped-643x350.jpg");
-  margin-bottom: 13px;
-  margin-top: -20px;
-  min-height: 350px;
-}
-
-.qualities .qualities-wrapper {
-  width: 75%;
-  margin: auto;
-}
-
-.qualities .qualities-wrapper .qualities-wrapper-overlay {
-  background-color: rgba(245, 245, 245, 0.7);
-}
-
-.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column {
-  background-color: transparent;
-}
-
-.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column .qualities-content-wrapper {
-  background-color: transparent;
-}
-
 .about-us {
   margin-top: 12px;
   margin-bottom: 20px;
 }
 
 .about-us .about-us-left {
-  background-color: #86ab6a;
-}
-
-.about-us .about-us-left .about-us-left-content {
-  padding: 30%;
-}
-
-.about-us .about-us-left .about-us-left-content p {
-  color: #FFFFFF;
-}
-
-.about-us .about-us-left .about-us-left-content p:first-letter {
-  font-family: 'Monoton', cursive;
-  font-size: 2em;
-  font-weight: 700;
+  min-height: 330px;
+  background-image: url("/images/business-woman-ideas-1080x721.jpg");
 }
 
 .about-us .about-us-right .about-us-right-content {
-  padding: 25px;
+  padding: 10%;
 }
 
 .about-us .about-us-right .about-us-right-content .card {
@@ -13997,102 +13966,218 @@ nav.main-nav p a.is-logo-text {
 }
 
 .about-us .about-us-right .about-us-right-content .card .card-header .about-us-card-header-title h2 {
-  color: #86ab6a;
   font-family: 'Quicksand', sans-serif;
 }
 
 .about-us .about-us-right .about-us-right-content .card .card-header .about-us-card-header-title hr#about-us-divider {
   background-color: #86ab6a;
-  width: 70%;
+  width: 60%;
   margin: auto;
   margin-bottom: 25px;
+  border-bottom: 4px solid #86ab6a;
 }
 
 .about-us .about-us-right .about-us-right-content .card .card-content .content .about-us-content-wrapper {
   text-align: center;
+  padding: 25px;
 }
 
-.main-content .services .card {
+.services .card {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.main-content .services .card .card-header {
+.services .card .card-header {
   padding: 20px;
 }
 
-.main-content .services .card .card-header.services-header {
+.services .card .card-header.services-header {
   background-color: #FFFFFF;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.main-content .services .card .card-header .service-title {
+.services .card .card-header .service-title {
   text-align: center;
   margin: auto;
 }
 
-.main-content .services .card .card-header .service-title h2 {
+.services .card .card-header .service-title h2 {
   font-family: 'Quicksand', sans-serif;
   color: #86ab6a;
 }
 
-.main-content .services .card .card-content .inner-card-service .card-header {
+.services .card .card-content .inner-card-service .card-header {
   background-color: #86ab6a;
   border-radius: 10px;
 }
 
-.main-content .services .card .card-content .inner-card-service .card-header .card-header-wrapper {
+.services .card .card-content .inner-card-service .card-header .card-header-wrapper {
   margin: auto;
   color: #ffffff;
 }
 
-.main-content .services .card .card-content .inner-card-service .card-header .card-header-wrapper .card-header-title-icon {
+.services .card .card-content .inner-card-service .card-header .card-header-wrapper .card-header-title-icon {
   text-align: center;
 }
 
-.main-content .services .card .card-content .inner-card-service .card-header .card-header-wrapper .card-header-title-text {
+.services .card .card-content .inner-card-service .card-header .card-header-wrapper .card-header-title-text {
   text-align: center;
 }
 
-.main-content .services .card .card-content .inner-card-service .card-content .content ul {
+.services .card .card-content .inner-card-service .card-content .content ul {
   width: 100%;
   margin: auto;
 }
 
-.main-content .services .card .card-content .inner-card-service .card-content .content ul li {
+.services .card .card-content .inner-card-service .card-content .content ul li {
   list-style: none;
 }
 
-.main-content .services .card .card-content .inner-card-service .card-content .content ul li span.service-list-icon {
+.services .card .card-content .inner-card-service .card-content .content ul li span.service-list-icon {
   font-size: 0.5em;
   color: #86ab6a;
 }
 
-.main-content .services .card .card-content .inner-card-service .card-content .content ul li span.service-list-icon i.fa-star {
+.services .card .card-content .inner-card-service .card-content .content ul li span.service-list-icon i.fa-star {
   margin-top: 7px;
   margin-left: -14px;
 }
 
-.main-content .process .process-wrapper {
+.qualities {
+  background-image: url("/images/business-building-bridge-cropped-643x350.jpg");
+  margin-bottom: 13px;
+  margin-top: 12px;
+  min-height: 495px;
+}
+
+@media screen and (max-width: 2374px) {
+  .qualities {
+    min-height: 487px;
+  }
+}
+
+@media screen and (max-width: 2321px) {
+  .qualities {
+    min-height: 480px;
+  }
+}
+
+@media screen and (max-width: 1452px) {
+  .qualities {
+    min-height: 512px;
+  }
+}
+
+@media screen and (max-width: 1299px) {
+  .qualities {
+    min-height: 522px;
+  }
+}
+
+@media screen and (max-width: 1275px) {
+  .qualities {
+    min-height: 438px;
+  }
+}
+
+.qualities .qualities-wrapper {
+  width: 75%;
+  min-height: 80%;
+  margin: auto;
+  padding-top: 2%;
+}
+
+@media screen and (max-width: 1275px) {
+  .qualities .qualities-wrapper {
+    width: 99%;
+    padding: 0;
+    height: 100%;
+  }
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay {
+  background-color: rgba(245, 245, 245, 0.7);
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column {
+  background-color: transparent;
+  margin-left: 30px;
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column .qualities-content-wrapper {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column .qualities-content-wrapper .card-header {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column .qualities-content-wrapper .card-header .qualities-card-header-title {
+  margin: auto;
+  padding-top: 10px;
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column .qualities-content-wrapper .card-header .qualities-card-header-title hr#qualities-content-divider {
+  background-color: #86ab6a;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 25px;
+  border-bottom: 4px solid #86ab6a;
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column .qualities-content-wrapper .card-content .qualities-card-content {
+  margin-left: 40px;
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column .qualities-content-wrapper .card-content .qualities-card-content .qualities-content-section {
+  padding: 0;
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column .qualities-content-wrapper .card-content .qualities-card-content .qualities-content-section .bullet {
+  width: 80%;
+  border-bottom: 1px solid #989898;
+  background-color: rgba(245, 245, 245, 0.5);
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column .qualities-content-wrapper .card-content .qualities-card-content .qualities-content-section .bullet .bullet-title span.quality-bullet {
+  color: #86ab6a;
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column .qualities-content-wrapper .card-content .qualities-card-content .qualities-content-section .bullet .bullet-title span.quality-bullet i {
+  margin: 5px 10px 0 0;
+}
+
+.qualities .qualities-wrapper .qualities-wrapper-overlay .qualities-column .qualities-content-wrapper .card-content .qualities-card-content .qualities-content-section .bullet .bullet-content {
+  font-size: 0.7em;
+  margin-left: 25px;
+}
+
+.process .process-wrapper {
   background-color: #86ab6a;
   margin: 0 auto;
   padding-top: 15px;
 }
 
-.main-content .process .process-wrapper .process-left {
+.process .process-wrapper .process-left {
   margin-top: 28%;
   color: #ffffff;
 }
 
-.main-content .process .process-wrapper .process-left .process-left-heading {
+.process .process-wrapper .process-left .process-left-heading {
   text-transform: uppercase;
   font-family: 'Quicksand', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
 }
 
-.main-content .process .process-wrapper .process-right .process-section .process-section-heading {
+.process .process-wrapper .process-right .process-section .process-section-heading {
   position: relative;
   text-transform: uppercase;
   font-family: 'Quicksand', sans-serif;
@@ -14103,7 +14188,7 @@ nav.main-nav p a.is-logo-text {
   margin-bottom: 4px;
 }
 
-.main-content .process .process-wrapper .process-right .process-section .process-section-heading:before {
+.process .process-wrapper .process-right .process-section .process-section-heading:before {
   content: '';
   background-color: #ffffff;
   border-radius: 50%;
@@ -14115,18 +14200,18 @@ nav.main-nav p a.is-logo-text {
   top: 5px;
 }
 
-.main-content .process .process-wrapper .process-right .process-section .process-section-body {
+.process .process-wrapper .process-right .process-section .process-section-body {
   padding: 24px 0 64px 32px;
   border-left: 1px solid #ffffff;
   margin-bottom: 4px;
 }
 
-.main-content .process .process-wrapper .process-right .process-section .process-section-body .step-title {
+.process .process-wrapper .process-right .process-section .process-section-body .step-title {
   color: #ffffff;
   font-size: 1.2em;
 }
 
-.main-content .process .process-wrapper .process-right .process-section .process-section-body .step-subtitle {
+.process .process-wrapper .process-right .process-section .process-section-body .step-subtitle {
   color: #ffffff;
 }
 

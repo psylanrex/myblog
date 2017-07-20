@@ -1,20 +1,26 @@
 
 nav.main-nav {
-  margin: 20px 0;
-  p {
-    a {
-      &.is-primary-green {
-        color: $primary-green;
-        font-weight: bold;
-      }
-      &.is-logo-text {
-        color: #222324;
-        font-size: large;
-        font-weight: bold;
-        font-family: 'Quicksand', sans-serif;
+  margin: 20px 0 0 0;
+  .menu-item-wrapper {
+    margin: 0 10px;
+    border-bottom: 7px solid $lightest-green;
+    padding-bottom: 12px;
+    p {
+      a {
+        &.is-primary-green {
+          color: $primary-green;
+          font-weight: bold;
+        }
+        &.is-logo-text {
+          color: #222324;
+          font-size: large;
+          font-weight: bold;
+          font-family: 'Quicksand', sans-serif;
+        }
       }
     }
   }
+
 }
 .hero {
   background-image: url(/images/business-sit-ipad-1080x721.jpg);
@@ -37,45 +43,19 @@ nav.main-nav {
     }
   }
 }
-.qualities {
-  background-image: url('/images/business-building-bridge-cropped-643x350.jpg');
-  margin-bottom: 13px;
-  margin-top: -20px;
-  min-height: 350px;
-  .qualities-wrapper {
-    width: 75%;
-    margin: auto;
-    .qualities-wrapper-overlay {
-      background-color: rgba(245,245,245,0.7);
-      .qualities-column {
-        background-color: transparent;
-        .qualities-content-wrapper {
-          background-color: transparent;
-        }
-      }
-    }
-  }
-}
 .about-us {
   margin-top: 12px;
   margin-bottom: 20px;
   .about-us-left {
-    background-color: $primary-green;
+    min-height: 330px;
+    background-image: url('/images/business-woman-ideas-1080x721.jpg');
     .about-us-left-content {
-      padding: 30%;
-      p {
-        color: #FFFFFF;
-        &:first-letter {
-          font-family: 'Monoton', cursive;
-          font-size: 2em;
-          font-weight: 700;
-        }
-      }
+
     }
   }
   .about-us-right {
     .about-us-right-content {
-      padding: 25px;
+      padding: 10%;
       .card {
         box-shadow: none;
         .card-header {
@@ -84,14 +64,15 @@ nav.main-nav {
             margin: auto;
             text-align: center;
             h2 {
-              color: $primary-green;
+              //color: $primary-green;
               font-family: 'Quicksand', sans-serif;
             }
             hr#about-us-divider {
               background-color: $primary-green;
-              width: 70%;
+              width: 60%;
               margin: auto;
               margin-bottom: 25px;
+              border-bottom: 4px solid $primary-green;
             }
           }
         }
@@ -99,6 +80,7 @@ nav.main-nav {
           .content {
             .about-us-content-wrapper {
               text-align: center;
+              padding: 25px;
             }
           }
         }
@@ -107,55 +89,53 @@ nav.main-nav {
     }
   }
 }
-.main-content {
-  .services {
-    .card {
-      box-shadow: none;
-      .card-header {
-        padding: 20px;
-        &.services-header {
-          background-color: #FFFFFF;
-          box-shadow: none;
-        }
-        .service-title {
-          text-align: center;
-          margin: auto;
-          h2 {
-            font-family: 'Quicksand', sans-serif;
-            color: $primary-green;
-          }
+.services {
+  .card {
+    box-shadow: none;
+    .card-header {
+      padding: 20px;
+      &.services-header {
+        background-color: #FFFFFF;
+        box-shadow: none;
+      }
+      .service-title {
+        text-align: center;
+        margin: auto;
+        h2 {
+          font-family: 'Quicksand', sans-serif;
+          color: $primary-green;
         }
       }
-      .card-content {
-        .inner-card-service {
-          .card-header {
-            background-color: $primary-green;
-            border-radius: 10px;
-            .card-header-wrapper {
-              margin: auto;
-              color: #ffffff;
-              .card-header-title-icon {
-                text-align: center;
-              }
-              .card-header-title-text {
-                text-align: center;
-              }
+    }
+    .card-content {
+      .inner-card-service {
+        .card-header {
+          background-color: $primary-green;
+          border-radius: 10px;
+          .card-header-wrapper {
+            margin: auto;
+            color: #ffffff;
+            .card-header-title-icon {
+              text-align: center;
+            }
+            .card-header-title-text {
+              text-align: center;
             }
           }
-          .card-content {
-            .content {
-              ul {
-                width: 100%;
-                margin: auto;
-                li {
-                  list-style: none;
-                  span.service-list-icon {
-                    font-size: 0.5em;
-                    color: $primary-green;
-                    i.fa-star {
-                      margin-top: 7px;
-                      margin-left: -14px;
-                    }
+        }
+        .card-content {
+          .content {
+            ul {
+              width: 100%;
+              margin: auto;
+              li {
+                list-style: none;
+                span.service-list-icon {
+                  font-size: 0.5em;
+                  color: $primary-green;
+                  i.fa-star {
+                    margin-top: 7px;
+                    margin-left: -14px;
                   }
                 }
               }
@@ -165,55 +145,156 @@ nav.main-nav {
       }
     }
   }
-  .process {
-    .process-wrapper {
-      background-color: $primary-green;
-      margin: 0 auto;
-      padding-top: 15px;
-      .process-left {
-        margin-top: 28%;
-        color: #ffffff;
-        .process-left-heading {
-          text-transform: uppercase;
-          font-family: 'Quicksand', sans-serif;
-          font-size: 1.3em;
-          font-weight: bold;
-        }
-      }
-      .process-right {
-        .process-section {
-          .process-section-heading {
-            position: relative;
-            text-transform: uppercase;
-            font-family: 'Quicksand', sans-serif;
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 1.2em;
-            padding-left: 32px;
-            margin-bottom: 4px;
-            &:before {
-              content: '';
-              background-color: #ffffff;
-              border-radius: 50%;
-              height: 14px;
-              width: 14px;
-              margin-right: 24px;
-              position: absolute;
-              left: -6px;
-              top: 5px;
+}
+.qualities {
+  background-image: url('/images/business-building-bridge-cropped-643x350.jpg');
+  margin-bottom: 13px;
+  margin-top: 12px;
+  min-height: 495px;
+  @media screen and (max-width: 2374px) {
+    min-height: 487px;
+  }
+  @media screen and (max-width: 2321px) {
+    min-height: 480px;
+  }
+  @media screen and (max-width: 1452px) {
+    min-height: 512px;
+  }
+  @media screen and (max-width: 1299px) {
+    min-height: 522px;
+  }
+  @media screen and (max-width: 1275px) {
+    min-height: 438px;
+  }
+  //@media screen and (max-width: 1034px) {
+  //  min-height: 530px;
+  //}
+  //@media screen and (max-width: 981px) {
+  //  min-height: 528px;
+  //}
+  //@media screen and (max-width: 850px) {
+  //  min-height: 438px;
+  //}
+  .qualities-wrapper {
+    width: 75%;
+    min-height: 80%;
+    margin: auto;
+    padding-top: 2%;
+    //@media screen and (max-width: 882px) {
+    //  width: 83%;
+    //}
+    @media screen and (max-width: 1275px) {
+      width: 99%;
+      padding: 0;
+      height: 100%;
+    }
+    .qualities-wrapper-overlay {
+      background-color: rgba(245,245,245,0.7);
+      .qualities-column {
+        background-color: transparent;
+        margin-left: 30px;
+        .qualities-content-wrapper {
+          background-color: transparent;
+          box-shadow: none;
+          .card-header {
+            box-shadow: none;
+            .qualities-card-header-title {
+              margin: auto;
+              padding-top: 10px;
+              hr#qualities-content-divider {
+                background-color: $primary-green;
+                width: 60%;
+                margin: auto;
+                margin-bottom: 25px;
+                border-bottom: 4px solid $primary-green;
+              }
             }
           }
-          .process-section-body {
-            padding: 24px 0 64px 32px;
-            border-left: 1px solid #ffffff;
-            margin-bottom: 4px;
-            .step-title {
-              color: #ffffff;
-              font-size: 1.2em;
+          .card-content {
+            .qualities-card-content {
+              margin-left: 40px;
+              .qualities-content-section {
+                padding: 0;
+                .bullet {
+                  width: 80%;
+                  border-bottom: 1px solid #989898;
+                  background-color: rgba(245,245,245,0.5);
+                  padding: 8px;
+                  margin-bottom: 5px;
+                  border-radius: 10px;
+                  .bullet-title {
+                    span {
+                      &.quality-bullet {
+                        color: $primary-green;
+                        i {
+                          margin: 5px 10px 0 0;
+                        }
+                      }
+                    }
+                  }
+                  .bullet-content {
+                    font-size: 0.7em;
+                    margin-left: 25px;
+                  }
+                }
+              }
             }
-            .step-subtitle {
-              color: #ffffff;
-            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.process {
+  .process-wrapper {
+    background-color: $primary-green;
+    margin: 0 auto;
+    padding-top: 15px;
+    .process-left {
+      margin-top: 28%;
+      color: #ffffff;
+      .process-left-heading {
+        text-transform: uppercase;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+    }
+    .process-right {
+      .process-section {
+        .process-section-heading {
+          position: relative;
+          text-transform: uppercase;
+          font-family: 'Quicksand', sans-serif;
+          color: #ffffff;
+          font-weight: bold;
+          font-size: 1.2em;
+          padding-left: 32px;
+          margin-bottom: 4px;
+          &:before {
+            content: '';
+            background-color: #ffffff;
+            border-radius: 50%;
+            height: 14px;
+            width: 14px;
+            margin-right: 24px;
+            position: absolute;
+            left: -6px;
+            top: 5px;
+          }
+        }
+        .process-section-body {
+          padding: 24px 0 64px 32px;
+          border-left: 1px solid #ffffff;
+          margin-bottom: 4px;
+          .step-title {
+            color: #ffffff;
+            font-size: 1.2em;
+          }
+          .step-subtitle {
+            color: #ffffff;
           }
         }
       }
