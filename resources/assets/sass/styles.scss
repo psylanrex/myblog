@@ -20,7 +20,6 @@ nav.main-nav {
       }
     }
   }
-
 }
 .hero {
   background-image: url(/images/business-sit-ipad-1080x721.jpg);
@@ -166,23 +165,11 @@ nav.main-nav {
   @media screen and (max-width: 1275px) {
     min-height: 438px;
   }
-  //@media screen and (max-width: 1034px) {
-  //  min-height: 530px;
-  //}
-  //@media screen and (max-width: 981px) {
-  //  min-height: 528px;
-  //}
-  //@media screen and (max-width: 850px) {
-  //  min-height: 438px;
-  //}
   .qualities-wrapper {
     width: 75%;
     min-height: 80%;
     margin: auto;
     padding-top: 2%;
-    //@media screen and (max-width: 882px) {
-    //  width: 83%;
-    //}
     @media screen and (max-width: 1275px) {
       width: 99%;
       padding: 0;
@@ -246,7 +233,6 @@ nav.main-nav {
     }
   }
 }
-
 .process {
   .process-wrapper {
     background-color: $primary-green;

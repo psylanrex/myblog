@@ -13507,6 +13507,14 @@ label.panel-block:hover {
   transition: opacity 86ms ease-out, visibility 86ms ease-out;
 }
 
+.is-muted {
+  color: #b5b5b5;
+}
+
+a.is-muted:hover {
+  color: #7a7a7a;
+}
+
 .m-t-5 {
   margin-top: 5px !important;
 }
