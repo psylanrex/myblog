@@ -14223,3 +14223,11 @@ nav.main-nav .menu-item-wrapper p a.is-logo-text {
   color: #ffffff;
 }
 
+.side-menu {
+  position: fixed;
+  height: 100vh;
+  width: 200px;
+  background-color: #FFFFFF;
+  overflow-y: scroll;
+}
+
