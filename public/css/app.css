@@ -14226,8 +14226,12 @@ nav.main-nav .menu-item-wrapper p a.is-logo-text {
 .side-menu {
   position: fixed;
   height: 100vh;
-  width: 200px;
+  width: 250px;
   background-color: #FFFFFF;
   overflow-y: scroll;
+}
+
+.side-menu .menu p.menu-label.is-aligned-center {
+  margin: auto;
 }
 
