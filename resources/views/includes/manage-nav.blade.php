@@ -18,10 +18,10 @@
         </p>
         <ul class="menu-list">
             <li>
-                <a href="">Manage Users</a>
+                <a href="/manage/users">Manage Users</a>
             </li>
             <li>
-                <a href="">Roles &amp; Permissions</a>
+                <a href="#">Roles &amp; Permissions</a>
             </li>
         </ul>
             <hr class="dropdown-divider">
