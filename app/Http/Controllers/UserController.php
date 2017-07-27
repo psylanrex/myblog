@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
@@ -15,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy('name')->paginate(1);
+        $users = User::orderBy('name')->paginate(10);
         return view('manage.users.index', compact('users'));
     }
 
@@ -44,7 +45,7 @@ class UserController extends Controller
         $user = new User();
         $password = $request->get('password');
         if ( ! $password) {
-            $password = $this->generateRandomPassword();
+            $password = Hash::make($this->generateRandomPassword());
         }
         $user->name = $request->get('name');
         $user->email = $request->get('email');
@@ -106,6 +107,19 @@ class UserController extends Controller
             'name'  => 'required|max:255',
             'email' => 'required|email|unique:users,email,'.$id
         ]);
+        $user = User::findOrFail($id);
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        if ($option = $request->get('password_options') == 'auto') {
+            $user->password = Hash::make($this->generateRandomPassword());
+        } elseif ($option == 'manual') {
+            $user->password = Hash::make($request->get('password'));
+        }
+        if ( ! $user->save()) {
+            Session::flash('danger', 'Failed to update user info.');
+            return redirect()->route('users.edit', $id);
+        }
+        return redirect()->route('users.show', $id);
     }
 
     /**

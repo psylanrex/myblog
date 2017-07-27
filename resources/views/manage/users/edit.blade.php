@@ -11,6 +11,8 @@
         <div class="columns">
             <div class="column">
                 <form action="{{ route('users.update', $user->id) }}" method="POST">
+                    {{method_field('PUT')}}
+                    {{ csrf_field() }}
                     <div class="field">
                         <label for="name">Name</label>
                         <p class="control">
@@ -35,7 +37,7 @@
                             <div class="field">
                                 <b-radio name="password_options" value="manual">Manually Set New Password</b-radio>
                                 <p class="control">
-                                    <input type="text" class="input" name="password" id="password" v-if="password_options == 'manual'" placeholder="Manually give a password to this user">
+                                    <input type="text" class="input m-t-10" name="password" id="password" v-if="password_options == 'manual'" placeholder="Manually give a password to this user">
                                 </p>
                             </div>
                         </b-radio-group>
@@ -50,7 +52,9 @@
     <script>
         let app = new Vue({
             el: '#app',
-            password_options: 'keep'
+            data: {
+                password_options: 'keep'
+            }
         })
     </script>
 @stop
