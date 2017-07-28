@@ -13,7 +13,9 @@
 @include('includes.main-nav')
 @include('includes.manage-nav')
 <div class="management-area" id="app">
-    @yield('content')
+    <div class="box m-t-25">
+        @yield('content')
+    </div>
 </div>
 
 <!-- Scripts -->
