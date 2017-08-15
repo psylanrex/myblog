@@ -21,7 +21,11 @@
                 <a href="/manage/users">Manage Users</a>
             </li>
             <li>
-                <a href="/manage/permissions">Roles &amp;amp; Permissions</a>
+                <a role="button">Roles &amp; Permissions</a>
+                <ul>
+                    <li><a href="{{ route('roles.index') }}">Roles</a></li>
+                    <li><a href="{{ route('permissions.index') }}">Permissions</a></li>
+                </ul>
             </li>
         </ul>
             <hr class="dropdown-divider">

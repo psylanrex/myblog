@@ -6,7 +6,7 @@ use App\Permission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class PermissionsController extends Controller
+class PermissionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -100,7 +100,8 @@ class PermissionsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $permission = Permission::findOrFail($id);
+        return view('manage.permissions.edit', compact('permission'));
     }
 
     /**
@@ -112,7 +113,19 @@ class PermissionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'display_name'  => 'required|max:255',
+            'description'   => 'required|max:255'
+        ]);
+        $permission = Permission::findOrFail($id);
+        $permission->display_name = $request->get('display_name');
+        $permission->description = $request->get('description');
+        if ( ! $permission->save()) {
+            Session::flash('danger', 'Failed to update permission.');
+            return redirect()->route('permissions.edit', $id);
+        }
+        Session::flash('success', 'Permission has been successfully updated');
+        return redirect()->route('permissions.show', $id);
     }
 
     /**
