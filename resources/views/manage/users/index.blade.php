@@ -30,7 +30,7 @@
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->created_at->toFormattedDateString() }}</td>
                         <td>
-                            <button class="button is-primary">Edit</button>
+                            <a href="{{ route('users.show', $user->id) }}" class="button is-primary">View</a>
                         </td>
                     </tr>
                 @endforeach

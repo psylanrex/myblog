@@ -8,10 +8,10 @@
             </div>
         </div>
         <hr>
-        <div class="columns">
-            <div class="column">
-                <form action="{{ route('users.store') }}" method="POST">
-                    {{ csrf_field() }}
+        <form action="{{ route('users.store') }}" method="POST">
+            {{ csrf_field() }}
+            <div class="columns">
+                <div class="column">
                     <div class="field">
                         <label for="name">Name</label>
                         <p class="control">
@@ -31,10 +31,23 @@
                             <b-checkbox class="m-t-15" name="auto-generate" v-model="auto_password">Auto Generate Password</b-checkbox>
                         </p>
                     </div>
-                    <button class="button is-primary">Create User</button>
-                </form>
+                </div>
+                <div class="column">
+                    <label for="roles">Roles</label>
+                    <input type="hidden" name="roles" :value="roleSelected">
+                    <b-checkbox-group v-model="roleSelected">
+                        @foreach($roles as $role)
+                            <div class="field">
+                                <b-checkbox :custom-value="{{ $role->id }}">{{ $role->display_name }}</b-checkbox>
+                            </div>
+                        @endforeach
+                    </b-checkbox-group>
+                </div>
             </div>
-        </div>
+
+            <button class="button is-primary">Create User</button>
+        </form>
+
     </div>
 @stop
 
@@ -43,7 +56,8 @@
         var app = new Vue({
             el: '#app',
             data: {
-                auto_password: true
+                auto_password: true,
+                roleSelected: {!! old('roles') ?: '[]' !!}
             }
         })
     </script>

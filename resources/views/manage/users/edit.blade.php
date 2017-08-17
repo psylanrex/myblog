@@ -8,11 +8,11 @@
             </div>
         </div>
         <hr>
-        <div class="columns">
-            <div class="column">
-                <form action="{{ route('users.update', $user->id) }}" method="POST">
-                    {{method_field('PUT')}}
-                    {{ csrf_field() }}
+        <form action="{{ route('users.update', $user->id) }}" method="POST">
+            {{method_field('PUT')}}
+            {{ csrf_field() }}
+            <div class="columns">
+                <div class="column">
                     <div class="field">
                         <label for="name">Name</label>
                         <p class="control">
@@ -42,10 +42,23 @@
                             </div>
                         </b-radio-group>
                     </div>
-                    <button class="button is-primary">Edit User</button>
-                </form>
+                </div>
+                <div class="column">
+                    <label for="roles">Roles</label>
+                    <input type="hidden" name="roles" :value="roleSelected">
+                    <b-checkbox-group v-model="roleSelected">
+                        @foreach($roles as $role)
+                            <div class="field">
+                                <b-checkbox :custom-value="{{ $role->id }}">{{ $role->display_name }}</b-checkbox>
+                            </div>
+                        @endforeach
+                    </b-checkbox-group>
+                </div>
             </div>
-        </div>
+
+            <button class="button is-primary">Save Changes</button>
+        </form>
+
     </div>
 @stop
 @section('scripts')
@@ -53,7 +66,8 @@
         let app = new Vue({
             el: '#app',
             data: {
-                password_options: 'keep'
+                password_options: 'keep',
+                roleSelected: {!! $user->roles->pluck('id') !!}
             }
         })
     </script>

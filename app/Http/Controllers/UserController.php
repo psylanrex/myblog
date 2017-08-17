@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -27,7 +28,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('manage.users.create');
+        $roles = Role::all();
+        return view('manage.users.create', compact('roles'));
     }
 
     /**
@@ -55,6 +57,9 @@ class UserController extends Controller
             Session::flash('danger', 'Failed to create new user.');
             return redirect()->route('users.create');
         }
+        if ($request->has('roles')) {
+            $user->syncRoles(explode(',', $request->get('roles')));
+        }
         return redirect()->route('users.show', $user->id);
     }
 
@@ -78,7 +83,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::findOrFail($id);
+        $user = User::with('roles')->where('id', $id)->first();
         return view('manage.users.show', compact('user'));
     }
 
@@ -90,8 +95,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
+        $roles = Role::all();
         $user = User::findOrFail($id);
-        return view('manage.users.edit', compact('user'));
+        return view('manage.users.edit', compact('user', 'roles'));
     }
 
     /**
@@ -115,10 +121,13 @@ class UserController extends Controller
         } elseif ($option == 'manual') {
             $user->password = Hash::make($request->get('password'));
         }
+
         if ( ! $user->save()) {
             Session::flash('danger', 'Failed to update user info.');
             return redirect()->route('users.edit', $id);
         }
+        $user->syncRoles(explode(',', $request->get('roles')));
+
         return redirect()->route('users.show', $id);
     }
 
