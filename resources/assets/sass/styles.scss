@@ -89,52 +89,61 @@ nav.main-nav {
   }
 }
 .services {
+  margin: 3em;
+  padding: 2em;
   .card {
     box-shadow: none;
     .card-header {
-      padding: 20px;
-      &.services-header {
-        background-color: #FFFFFF;
-        box-shadow: none;
-      }
-      .service-title {
-        text-align: center;
+      box-shadow: none;
+      .services-card-header-title {
         margin: auto;
+        text-align: center;
+        padding-bottom: 1.5em;
         h2 {
           font-family: 'Quicksand', sans-serif;
-          color: $primary-green;
         }
       }
     }
     .card-content {
-      .inner-card-service {
-        .card-header {
-          background-color: $primary-green;
-          border-radius: 10px;
-          .card-header-wrapper {
-            margin: auto;
-            color: #ffffff;
-            .card-header-title-icon {
-              text-align: center;
-            }
-            .card-header-title-text {
-              text-align: center;
-            }
-          }
-        }
-        .card-content {
-          .content {
-            ul {
-              width: 100%;
-              margin: auto;
-              li {
-                list-style: none;
-                span.service-list-icon {
-                  font-size: 0.5em;
-                  color: $primary-green;
-                  i.fa-star {
-                    margin-top: 7px;
-                    margin-left: -14px;
+      .columns {
+        .column.is-one-third {
+          .service-outer-container {
+            border-top: 5px solid $primary-green;
+            .service-container {
+              border-width: 5px;
+              border-style: solid;
+              -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from($primary-green), to(rgba(0, 0, 0, 0))) 1 100%;
+              -webkit-border-image: -webkit-linear-gradient($primary-green, rgba(0, 0, 0, 0)) 1 100%;
+              -moz-border-image: -moz-linear-gradient($primary-green, rgba(0, 0, 0, 0)) 1 100%;
+              -o-border-image: -o-linear-gradient($primary-green, rgba(0, 0, 0, 0)) 1 100%;
+              border-image: linear-gradient(to bottom, $primary-green, rgba(0, 0, 0, 0)) 1 100%;
+              .card {
+                padding: 15px;
+                box-shadow: none;
+                .card-header {
+                  box-shadow: none;
+                  hr.single-service-divider {
+                    background-color: $primary-green;
+                    width: 25%;
+                    margin-top: 40px;
+                    margin-left: -192px;
+                    border-bottom: 2px solid $primary-green;
+                  }
+                }
+                .card-content {
+                  ul {
+                    li {
+                      list-style: none;
+                      span.service-list-icon {
+                        font-size: 0.5em;
+                        color: $primary-green;
+                        i.fa-star {
+                          margin-top: 7px;
+                          margin-left: -14px;
+                          margin-right: 5px;
+                        }
+                      }
+                    }
                   }
                 }
               }

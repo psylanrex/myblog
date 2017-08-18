@@ -50,180 +50,309 @@
         </div>
     </div>
 </section> {{--End About Us--}}
-<div class="container services"> {{--Services--}}
+<section class="container-fluid services">
     <div class="card">
-        <div class="card-header services-header">
-            <div class="service-title">
-                <h2 class="title is-2">
-                    What We Finance
-                </h2>
+        <div class="card-header">
+            <div class="services-card-header-title">
+                <h2 class="title is-2">What We Finance</h2>
             </div>
         </div>
         <div class="card-content">
             <div class="columns">
-                <div class="column is-4">
-                    <div class="card inner-card-service">
-                        <div class="card-header">
-                            <div class="card-header-wrapper">
-                                <div class="card-header-title-icon">
-                                    <span><i class="fa fa-2x fa-truck"></i></span>
+                <div class="column is-one-third">
+                    <div class="service-outer-container">
+                        <div class="service-container">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="title is-4">Commercial Vehicles</h4>
+                                    <hr class="single-service-divider">
                                 </div>
-                                <div class="card-header-title-text">
-                                    <p>Commercial Vehicles</p>
+                                <div class="card-content">
+                                    <ul>
+                                        <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span>Commercial Truck</li>
+                                        <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span>Commercial Van</li>
+                                        <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span>Commercial Trailer</li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                <ul>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Commercial Truck Leasing and Financing</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Commercial Van Leasing and Financing</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Commercial Trailer Leasing and Financing</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column is-4">
-                    <div class="card inner-card-service">
-                        <div class="card-header">
-                            <div class="card-header-wrapper">
-                                <div class="card-header-title-icon">
-                                    <span><i class="fa fa-2x fa-truck"></i></span>
+                <div class="column is-one-third">
+                    <div class="service-outer-container">
+                        <div class="service-container">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="title is-4">Commercial Vehicles</h4>
+                                    <hr class="single-service-divider">
                                 </div>
-                                <div class="card-header-title-text">
-                                    <p>Auto Shop Equipment</p>
+                                <div class="card-content">
+                                    <ul>
+                                        <li>Commercial Truck</li>
+                                        <li>Commercial Van</li>
+                                        <li>Commercial Trailer</li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                <ul>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Automotive Body Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Automotive Diagnostic Equipment Leasing and Financing</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column is-4">
-                    <div class="card inner-card-service">
-                        <div class="card-header">
-                            <div class="card-header-wrapper">
-                                <div class="card-header-title-icon">
-                                    <span><i class="fa fa-2x fa-truck"></i></span>
+                <div class="column is-one-third">
+                    <div class="service-outer-container">
+                        <div class="service-container">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="title is-4">Commercial Vehicles</h4>
+                                    <hr class="single-service-divider">
                                 </div>
-                                <div class="card-header-title-text">
-                                    <p>Construction Equipment</p>
+                                <div class="card-content">
+                                    <ul>
+                                        <li>Commercial Truck</li>
+                                        <li>Commercial Van</li>
+                                        <li>Commercial Trailer</li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                <ul>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Crane, Forklift, Skid Steer, Excavator, Jackhammer, Bulldozer</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Power Generator</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Compressor Drill Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Concrete Equipment Grinder</li>
-                                </ul>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="columns">
-                <div class="column is-4">
-                    <div class="card inner-card-service">
-                        <div class="card-header">
-                            <div class="card-header-wrapper">
-                                <div class="card-header-title-icon">
-                                    <span><i class="fa fa-2x fa-truck"></i></span>
+                <div class="column is-one-third">
+                    <div class="service-outer-container">
+                        <div class="service-container">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="title is-4">Commercial Vehicles</h4>
+                                    <hr class="single-service-divider">
                                 </div>
-                                <div class="card-header-title-text">
-                                    <p>Machine Tool</p>
+                                <div class="card-content">
+                                    <ul>
+                                        <li>Commercial Truck</li>
+                                        <li>Commercial Van</li>
+                                        <li>Commercial Trailer</li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                <ul>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Welding Machine</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Lathe and Milling Machine</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Saw</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> CNC Machine</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Molding Equipment </li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Plasma Cutter</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Waterjet Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Woodworking Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Stamping Press</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column is-4">
-                    <div class="card inner-card-service">
-                        <div class="card-header">
-                            <div class="card-header-wrapper">
-                                <div class="card-header-title-icon">
-                                    <span><i class="fa fa-2x fa-truck"></i></span>
+                <div class="column is-one-third">
+                    <div class="service-outer-container">
+                        <div class="service-container">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="title is-4">Commercial Vehicles</h4>
+                                    <hr class="single-service-divider">
                                 </div>
-                                <div class="card-header-title-text">
-                                    <p>Medical Equipment</p>
+                                <div class="card-content">
+                                    <ul>
+                                        <li>Commercial Truck</li>
+                                        <li>Commercial Van</li>
+                                        <li>Commercial Trailer</li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                <ul>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Dental Equipment and Seating</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Physical Therapy and Chiropractic Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Dermatology Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Veterinary Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Diagnostic and Imaging Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Medical Laser Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> X-Ray and Ultrasound Machine</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Dry Cleaning Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Wheelchair</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column is-4">
-                    <div class="card inner-card-service">
-                        <div class="card-header">
-                            <div class="card-header-wrapper">
-                                <div class="card-header-title-icon">
-                                    <span><i class="fa fa-2x fa-truck"></i></span>
+                <div class="column is-one-third">
+                    <div class="service-outer-container">
+                        <div class="service-container">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="title is-4">Commercial Vehicles</h4>
+                                    <hr class="single-service-divider">
                                 </div>
-                                <div class="card-header-title-text">
-                                    <p>Restaurant Equipment</p>
+                                <div class="card-content">
+                                    <ul>
+                                        <li>Commercial Truck</li>
+                                        <li>Commercial Van</li>
+                                        <li>Commercial Trailer</li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                <ul>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Ice Machine</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Refrigerator/Freezer</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Vending Machine Bakery/Catering Equipments</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Point of Sale System</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Restaurant Dishwasher</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Food Preparation Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Restaurant Oven/Warming Equipment</li>
-                                    <li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Restaurant Booth</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-</div>{{--End Services--}}
+</section>
+{{--<div class="container services"> --}}{{--Services--}}
+    {{--<div class="card">--}}
+        {{--<div class="card-header services-header">--}}
+            {{--<div class="service-title">--}}
+                {{--<h2 class="title is-2">--}}
+                    {{--What We Finance--}}
+                {{--</h2>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="card-content">--}}
+            {{--<div class="columns">--}}
+                {{--<div class="column is-4">--}}
+                    {{--<div class="card inner-card-service">--}}
+                        {{--<div class="card-header">--}}
+                            {{--<div class="card-header-wrapper">--}}
+                                {{--<div class="card-header-title-icon">--}}
+                                    {{--<span><i class="fa fa-2x fa-truck"></i></span>--}}
+                                {{--</div>--}}
+                                {{--<div class="card-header-title-text">--}}
+                                    {{--<p>Commercial Vehicles</p>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="card-content">--}}
+                            {{--<div class="content">--}}
+                                {{--<ul>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Commercial Truck Leasing and Financing</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Commercial Van Leasing and Financing</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Commercial Trailer Leasing and Financing</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="column is-4">--}}
+                    {{--<div class="card inner-card-service">--}}
+                        {{--<div class="card-header">--}}
+                            {{--<div class="card-header-wrapper">--}}
+                                {{--<div class="card-header-title-icon">--}}
+                                    {{--<span><i class="fa fa-2x fa-truck"></i></span>--}}
+                                {{--</div>--}}
+                                {{--<div class="card-header-title-text">--}}
+                                    {{--<p>Auto Shop Equipment</p>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="card-content">--}}
+                            {{--<div class="content">--}}
+                                {{--<ul>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Automotive Body Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Automotive Diagnostic Equipment Leasing and Financing</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="column is-4">--}}
+                    {{--<div class="card inner-card-service">--}}
+                        {{--<div class="card-header">--}}
+                            {{--<div class="card-header-wrapper">--}}
+                                {{--<div class="card-header-title-icon">--}}
+                                    {{--<span><i class="fa fa-2x fa-truck"></i></span>--}}
+                                {{--</div>--}}
+                                {{--<div class="card-header-title-text">--}}
+                                    {{--<p>Construction Equipment</p>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="card-content">--}}
+                            {{--<div class="content">--}}
+                                {{--<ul>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Crane, Forklift, Skid Steer, Excavator, Jackhammer, Bulldozer</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Power Generator</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Compressor Drill Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Concrete Equipment Grinder</li>--}}
+                                {{--</ul>--}}
+
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="columns">--}}
+                {{--<div class="column is-4">--}}
+                    {{--<div class="card inner-card-service">--}}
+                        {{--<div class="card-header">--}}
+                            {{--<div class="card-header-wrapper">--}}
+                                {{--<div class="card-header-title-icon">--}}
+                                    {{--<span><i class="fa fa-2x fa-truck"></i></span>--}}
+                                {{--</div>--}}
+                                {{--<div class="card-header-title-text">--}}
+                                    {{--<p>Machine Tool</p>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="card-content">--}}
+                            {{--<div class="content">--}}
+                                {{--<ul>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Welding Machine</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Lathe and Milling Machine</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Saw</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> CNC Machine</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Molding Equipment </li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Plasma Cutter</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Waterjet Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Woodworking Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Stamping Press</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="column is-4">--}}
+                    {{--<div class="card inner-card-service">--}}
+                        {{--<div class="card-header">--}}
+                            {{--<div class="card-header-wrapper">--}}
+                                {{--<div class="card-header-title-icon">--}}
+                                    {{--<span><i class="fa fa-2x fa-truck"></i></span>--}}
+                                {{--</div>--}}
+                                {{--<div class="card-header-title-text">--}}
+                                    {{--<p>Medical Equipment</p>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="card-content">--}}
+                            {{--<div class="content">--}}
+                                {{--<ul>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Dental Equipment and Seating</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Physical Therapy and Chiropractic Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Dermatology Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Veterinary Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Diagnostic and Imaging Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Medical Laser Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> X-Ray and Ultrasound Machine</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Dry Cleaning Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Wheelchair</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="column is-4">--}}
+                    {{--<div class="card inner-card-service">--}}
+                        {{--<div class="card-header">--}}
+                            {{--<div class="card-header-wrapper">--}}
+                                {{--<div class="card-header-title-icon">--}}
+                                    {{--<span><i class="fa fa-2x fa-truck"></i></span>--}}
+                                {{--</div>--}}
+                                {{--<div class="card-header-title-text">--}}
+                                    {{--<p>Restaurant Equipment</p>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="card-content">--}}
+                            {{--<div class="content">--}}
+                                {{--<ul>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Ice Machine</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Refrigerator/Freezer</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Vending Machine Bakery/Catering Equipments</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Point of Sale System</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Restaurant Dishwasher</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Food Preparation Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Restaurant Oven/Warming Equipment</li>--}}
+                                    {{--<li><span class="service-list-icon"><i class="fa fa-star" aria-hidden="true"></i></span> Restaurant Booth</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</div>--}}{{--End Services--}}
 <section class="qualities"> {{--Qualities--}}
     <div class="columns">
         <div class="qualities-wrapper">

@@ -13990,66 +13990,75 @@ nav.main-nav .menu-item-wrapper p a.is-logo-text {
   padding: 25px;
 }
 
+.services {
+  margin: 3em;
+  padding: 2em;
+}
+
 .services .card {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 .services .card .card-header {
-  padding: 20px;
-}
-
-.services .card .card-header.services-header {
-  background-color: #FFFFFF;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.services .card .card-header .service-title {
-  text-align: center;
+.services .card .card-header .services-card-header-title {
   margin: auto;
+  text-align: center;
+  padding-bottom: 1.5em;
 }
 
-.services .card .card-header .service-title h2 {
+.services .card .card-header .services-card-header-title h2 {
   font-family: 'Quicksand', sans-serif;
-  color: #86ab6a;
 }
 
-.services .card .card-content .inner-card-service .card-header {
+.services .card .card-content .columns .column.is-one-third .service-outer-container {
+  border-top: 5px solid #86ab6a;
+}
+
+.services .card .card-content .columns .column.is-one-third .service-outer-container .service-container {
+  border-width: 5px;
+  border-style: solid;
+  -o-border-image: linear-gradient(to bottom, #86ab6a, transparent) 1 100%;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(#86ab6a), to(transparent)) 1 100%;
+     border-image: linear-gradient(to bottom, #86ab6a, transparent) 1 100%;
+}
+
+.services .card .card-content .columns .column.is-one-third .service-outer-container .service-container .card {
+  padding: 15px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.services .card .card-content .columns .column.is-one-third .service-outer-container .service-container .card .card-header {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.services .card .card-content .columns .column.is-one-third .service-outer-container .service-container .card .card-header hr.single-service-divider {
   background-color: #86ab6a;
-  border-radius: 10px;
+  width: 25%;
+  margin-top: 40px;
+  margin-left: -192px;
+  border-bottom: 2px solid #86ab6a;
 }
 
-.services .card .card-content .inner-card-service .card-header .card-header-wrapper {
-  margin: auto;
-  color: #ffffff;
-}
-
-.services .card .card-content .inner-card-service .card-header .card-header-wrapper .card-header-title-icon {
-  text-align: center;
-}
-
-.services .card .card-content .inner-card-service .card-header .card-header-wrapper .card-header-title-text {
-  text-align: center;
-}
-
-.services .card .card-content .inner-card-service .card-content .content ul {
-  width: 100%;
-  margin: auto;
-}
-
-.services .card .card-content .inner-card-service .card-content .content ul li {
+.services .card .card-content .columns .column.is-one-third .service-outer-container .service-container .card .card-content ul li {
   list-style: none;
 }
 
-.services .card .card-content .inner-card-service .card-content .content ul li span.service-list-icon {
+.services .card .card-content .columns .column.is-one-third .service-outer-container .service-container .card .card-content ul li span.service-list-icon {
   font-size: 0.5em;
   color: #86ab6a;
 }
 
-.services .card .card-content .inner-card-service .card-content .content ul li span.service-list-icon i.fa-star {
+.services .card .card-content .columns .column.is-one-third .service-outer-container .service-container .card .card-content ul li span.service-list-icon i.fa-star {
   margin-top: 7px;
   margin-left: -14px;
+  margin-right: 5px;
 }
 
 .qualities {
