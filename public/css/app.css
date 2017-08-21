@@ -13952,6 +13952,7 @@ nav.main-nav .menu-item-wrapper p a.is-logo-text {
 .about-us .about-us-left {
   min-height: 330px;
   background-image: url("/images/business-woman-ideas-square-720x720.jpg");
+  background-repeat: no-repeat;
 }
 
 .about-us .about-us-right .about-us-right-content {
