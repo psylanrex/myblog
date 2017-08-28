@@ -1,28 +1,77 @@
-
-nav.main-nav {
-  margin: 20px 0 0 0;
-  .menu-item-wrapper {
-    margin: 0 10px;
-    border-bottom: 7px solid $lightest-green;
-    padding-bottom: 12px;
-    p {
-      a {
-        &.is-primary-green {
-          color: $primary-green;
-          font-weight: bold;
+header.main-nav {
+  .navbar {
+    background-color: #dbd7d2;
+    height: 70px;
+    .navbar-brand {
+      .navbar-burger.burger {
+        width: 100%;
+        .dropdown-menu {
+          background-color: #FFFFFF;
+          padding: 20px;
+          border-bottom: 2px solid #dddddd;
+          box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+          label {
+            display: block;
+            cursor: pointer;
+          }
+          input#menu {
+            display: none;
+            &:checked ~ .menu-content {
+              max-height: 1000px;
+              transition: all ease 1s;
+            }
+          }
+          .menu-content {
+            max-height: 0;
+            overflow: hidden;
+            ul {
+              list-style: none;
+              padding: 10px 0 0;
+              li {
+                padding: 10px 0;
+                a {
+                  color: $primary-green;
+                  font-family: 'Quicksand', sans-serif;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  &:hover, &:active {
+                    background-color: gray;
+                  }
+                }
+              }
+            }
+          }
         }
-        &.is-logo-text {
-          color: #222324;
-          font-size: large;
-          font-weight: bold;
-          font-family: 'Quicksand', sans-serif;
+      }
+    }
+    #navMainMenu {
+      ul {
+        width: 100%;
+        li {
+          height: 70px;
+          border-right: 1px solid #bcb7b2;
+          &.is-logo {
+            img {
+              max-height: 70px;
+            }
+          }
+          a {
+            color: $primary-green;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          &:last-child {
+            border-right: none;
+          }
         }
       }
     }
   }
 }
+
 .hero {
-  background-image: url(/images/business-sit-ipad-1080x721.jpg);
+  background-image: url(/images/business-team-fistbump-1080x737.jpg);
   background-size: cover;
   .overlay {
     background-color: rgba(64,64,64,0.6);
@@ -92,6 +141,10 @@ nav.main-nav {
 .services {
   margin: 3em;
   padding: 2em;
+  @media screen and (max-width: 470px) {
+    margin: 1.5em;
+    padding: 1em;
+  }
   .card {
     box-shadow: none;
     .card-header {
@@ -108,6 +161,7 @@ nav.main-nav {
     .card-content {
       .columns {
         .column.is-one-third {
+          min-width: 305px;
           .service-outer-container {
             border-top: 5px solid $primary-green;
             .service-container {
@@ -157,86 +211,64 @@ nav.main-nav {
 }
 .qualities {
   background-image: url('/images/business-building-bridge-cropped-643x350.jpg');
-  margin-bottom: 13px;
-  margin-top: 12px;
-  min-height: 495px;
-  @media screen and (max-width: 2374px) {
-    min-height: 487px;
-  }
-  @media screen and (max-width: 2321px) {
-    min-height: 480px;
-  }
-  @media screen and (max-width: 1452px) {
-    min-height: 512px;
-  }
-  @media screen and (max-width: 1299px) {
-    min-height: 522px;
-  }
-  @media screen and (max-width: 1275px) {
-    min-height: 438px;
-  }
-  .qualities-wrapper {
-    width: 75%;
-    min-height: 80%;
-    margin: auto;
-    padding-top: 2%;
-    @media screen and (max-width: 1275px) {
-      width: 99%;
-      padding: 0;
-      height: 100%;
-    }
-    .qualities-wrapper-overlay {
-      background-color: rgba(245,245,245,0.7);
-      .qualities-column {
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 350px;
+  margin-bottom: 35px;
+  .qualities-overlay {
+    background-color: rgba(80,80,80,0.7);
+    min-height: 350px;
+    width: 100%;
+    .qualities-wrapper {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 3em 0;
+      .card {
         background-color: transparent;
-        margin-left: 30px;
-        .qualities-content-wrapper {
-          background-color: transparent;
+        box-shadow: none;
+        .card-header {
           box-shadow: none;
-          .card-header {
-            box-shadow: none;
-            .qualities-card-header-title {
-              margin: auto;
-              padding-top: 10px;
-              hr#qualities-content-divider {
-                background-color: $primary-green;
-                width: 60%;
-                margin: auto;
-                margin-bottom: 25px;
-                border-bottom: 4px solid $primary-green;
-              }
+          .qualities-header-title {
+            margin: 0 auto 1em auto;
+            font-family: 'Quicksand', sans-serif;
+            h3.title {
+              color: #FFFFFF;
             }
           }
-          .card-content {
-            .qualities-card-content {
-              margin-left: 40px;
-              .qualities-content-section {
-                padding: 0;
-                .bullet {
-                  width: 80%;
-                  border-bottom: 1px solid #989898;
-                  background-color: rgba(245,245,245,0.5);
-                  padding: 8px;
-                  margin-bottom: 5px;
-                  border-radius: 10px;
-                  .bullet-title {
-                    span {
-                      &.quality-bullet {
-                        color: $primary-green;
-                        i {
-                          margin: 5px 10px 0 0;
-                        }
-                      }
+
+        }
+        .card-content {
+          .columns {
+            .column.is-one-third {
+              .quality-container {
+                border: 4px solid rgba(225,225,225,0.7);
+                border-radius: 8px;
+                .card {
+                  padding: 1.2em;
+                  box-shadow: none;
+                  background-color: transparent;
+                  color: #FFFFFF;
+                  .card-header {
+                    box-shadow: none;
+                    @media screen and (max-width: 1180px) {
+                      min-height: 60px;
+                    }
+                    h4.title {
+                      color: white;
                     }
                   }
-                  .bullet-content {
-                    font-size: 0.7em;
-                    margin-left: 25px;
+                  hr.quality-header-divider {
+                    margin: 0.5em 0 0 0;
+                    width: 30%;
+                  }
+                  .card-content {
+                    padding: 1.5rem 1.5rem 1.5rem 0;
                   }
                 }
+
               }
             }
-
           }
         }
       }
