@@ -13,6 +13,7 @@
                 <a href="{{ route('manage.dashboard') }}">Dashboard</a>
             </li>
         </ul>
+        <hr class="dropdown-divider">
         <p class="menu-label">
             Administration
         </p>
@@ -28,10 +29,23 @@
                 </ul>
             </li>
         </ul>
-            <hr class="dropdown-divider">
+        <hr class="dropdown-divider">
+        <p class="menu-label">
+            Blogging
+        </p>
         <ul class="menu-list">
             <li>
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                <a href="{{ route('posts.index') }}">All Posts</a>
+            </li>
+            <li>
+                <a href="{{ route('posts.create') }}">Create New Post</a>
+            </li>
+        </ul>
+        <hr class="dropdown-divider">
+        <ul class="menu-list">
+            <li>
+                <a href="{{ route('logout') }}"
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
                     Logout
                     <span class="icon"><i class="fa fa-fw fa-sign-out"></i></span>
                 </a>
