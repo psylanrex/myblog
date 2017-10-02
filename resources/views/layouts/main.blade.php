@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-@include('includes.main-nav')
+@include('includes.navs.main-nav')
 @yield('content')
 </body>
 </html>

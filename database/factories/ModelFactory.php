@@ -28,7 +28,14 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->sentence($nbWords = 6, $variableNbWords = true),
         'body' => $faker->paragraphs($nb = 3, $asText = true),
+        'published_at' => $faker->dateTimeBetween($startDate = $create_time, $endDate = 'now', $timezone = date_default_timezone_get()),
         'created_at' => $create_time,
         'updated_at' => $faker->dateTimeBetween($startDate = $create_time, $endDate = 'now', $timezone = date_default_timezone_get())
+    ];
+});
+
+$factory->define(App\Tag::class, function(Faker\Generator $faker) {
+    return [
+        'name' => $faker->word  
     ];
 });

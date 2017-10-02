@@ -35,10 +35,26 @@
         </p>
         <ul class="menu-list">
             <li>
-                <a href="{{ route('posts.index') }}">All Posts</a>
+                <a href="#">Posts</a>
+                <ul>
+                    <li>
+                        <a href="{{ route('posts.index') }}">All Posts</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('posts.create') }}">Create New Post</a>
+                    </li>
+                </ul>
             </li>
             <li>
-                <a href="{{ route('posts.create') }}">Create New Post</a>
+                <a href="#">Tags</a>
+                <ul>
+                    <li>
+                        <a href="{{ route('tags.index') }}">All Tags</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('tags.create') }}">Create New Tag</a>
+                    </li>
+                </ul>
             </li>
         </ul>
         <hr class="dropdown-divider">

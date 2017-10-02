@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-@include('includes.main-nav')
-@include('includes.manage-nav')
+@include('includes.navs.main-nav')
+@include('includes.navs.manage-nav')
 <div class="management-area" id="app">
     <div class="box m-t-25">
+        @include('includes.notifications.form-message')
         @yield('content')
     </div>
 </div>

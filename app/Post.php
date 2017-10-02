@@ -12,8 +12,31 @@ class Post extends Model
      * Returns post link on blog page
      * @return string
      */
-    public function getPostLink()
+    public function slug()
     {
-        return "/blog/" . implode('-', explode(' ', $this->title));
+        return strtolower(implode('-', explode(' ', $this->title)));
+    }
+    
+    public function getImageName()
+    {
+        return time() . '-' . $this->slug();
+    }
+    
+    /**
+     * Returns truncated text of the body
+     */
+    public function truncate($length)
+    {
+        return substr($this->body, 0, $length) . "... ";
+    }
+    
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag');
+    }
+    
+    public function image()
+    {
+        return $this->belongsTo('App\Image');
     }
 }

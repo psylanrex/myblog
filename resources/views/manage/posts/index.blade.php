@@ -11,32 +11,41 @@
             </div>
         </div>
         <hr>
-        <div class="box"> <!-- .box -->
-            <table class="table is-narrow">
-                <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th>Created</th>
-                    <th>Updated</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($posts as $post)
-                    <tr>
-                        <td>{{ $post->title }}</td>
-                        <td>{{ $post->body }}</td>
-                        <td>{{ $post->created_at }}</td>
-                        <td>{{ $post->updated_at }}</td>
-                        <td>
-                            <a href="{{ route('posts.edit', $post->id) }}" class="button is-primary">Edit</a>
-                            <a href="" class="button is-primary">View On Blog</a>
-                        </td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
+        <div class="columns is-multiline"> <!-- .box -->
+            @foreach ($posts as $post)
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src={{ $post->image_url }} alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">{{ $post->title }}</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    {{ $post->truncate(100) }}
+                                </p>
+                                <p>
+                                    @foreach ($post->tags as $tag)
+                                        <a>#{{ $tag->name }} </a>
+                                    @endforeach
+                                </p>
+                                <hr>
+                                <p>Created at: {{ $post->created_at }}</p>
+                                <p>Published at: {{ $post->published_at }}</p>
+                                <hr>
+                                <a class="button is-info" href="{{ route('posts.show', $post->id) }}">View</a>
+                                <button class="button is-primary">View in Blog</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
 @stop
