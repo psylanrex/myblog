@@ -37,6 +37,7 @@
                     </header>
                     <div class="card-content">
                         <div class="content">
+                            <p>URL: <a href="{{ url($post->slug) }}">{{ url($post->slug) }}</a></p>
                             <p>Created Time: {{ $post->created_at }}</p>
                             <p>Updated Time: {{ $post->updated_at }}</p>
                             <p>Published Time: {{ $post->published_at }}</p>

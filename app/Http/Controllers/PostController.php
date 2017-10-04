@@ -44,7 +44,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
+            'title' => 'required|unique:posts,title',
             'body'  => 'required',
             'image' => 'mimes:jpg,jpeg,bmp,png'
         ]);
@@ -56,13 +56,19 @@ class PostController extends Controller
             Session::flash('danger', 'Failed to create new post.');
             return redirect()->back();
         }
-
+        // Generate slug
+        $post->slug = $post->slug();
+        $post->save();
+        
+        // Save tags
         $tags = explode(',', $request->get('tags'));
         if (count($tags) > 0) {
             foreach ($tags as $tag) {
                 $post->tags()->attach($tag);
             }
         }
+        
+        // Save image if there is
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $filename = $post->getImageName() . '.' . $image->getClientOriginalExtension();
@@ -115,9 +121,8 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request->all());
         $this->validate($request, [
-            'title' => 'required',
+            'title' => 'required|unique:posts,title'.$id,
             'body'  => 'required'
         ]);
         $post = Post::findOrFail($id);
@@ -126,6 +131,11 @@ class PostController extends Controller
         if ($post->isDirty() && ! $post->save()) {
             Session::flash('danger', 'Failed to update post.');
         }
+        // Update slug
+        $post->slug = $post->slug();
+        $post->save();
+        
+        // Update tags
         $tags = explode(',', $request->get('tags'));
         if (count($tags) > 0) {
             $post->tags()->detach();

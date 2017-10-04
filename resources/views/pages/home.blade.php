@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<section class="hero"> {{--Hero--}}
+<section class="hero"> <!-- .hero -->
     <div class="overlay">
         <div class="hero-body">
             <div class="container">
@@ -21,8 +21,8 @@
             </div>
         </div>
     </div>
-</section> {{--End Hero--}}
-<section class="about-us"> {{--About Us--}}
+</section> <!-- End .hero -->
+<section class="about-us"> <!-- .about-us -->
     <div class="columns">
         <div class="column is-4 about-us-left">
 
@@ -49,8 +49,8 @@
             </div>
         </div>
     </div>
-</section> {{--End About Us--}}
-<section class="container-fluid services"> {{--Services--}}
+</section> <!-- End .about-us -->
+<section class="container-fluid services"> <!-- .services -->
     <div class="card">
         <div class="card-header">
             <div class="services-card-header-title">
@@ -195,9 +195,9 @@
             </div>
         </div>
     </div>
-</section> {{--End Services--}}
+</section> <!-- End .services -->
 
-<section class="qualities"> <!-- Qualities -->
+<section class="qualities"> <!-- .qualities -->
     <div class="qualities-overlay">
         <div class="qualities-wrapper">
             <div class="card">
@@ -252,9 +252,9 @@
             </div>
         </div>
     </div>
-</section> <!-- End Qualities -->
+</section> <!-- End .qualities -->
 
-<section class="box process"> {{--Process--}}
+<section class="box process"> <!-- .process -->
     <div class="columns process-wrapper">
         <div class="column is-3 process-left">
             <div class="process-left-heading">Our quick process</div>
@@ -295,7 +295,7 @@
             </div>
         </div>
     </div>
-</section> {{--End Process--}}
+</section> <!-- End .process -->
 
 <section class="contact">
 

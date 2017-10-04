@@ -39,4 +39,9 @@ class Post extends Model
     {
         return $this->belongsTo('App\Image');
     }
+    
+    public function scopePublished($query)
+    {
+        return $query->where('published_at', '>=', date("Y-m-d H:i:s"));
+    }
 }

@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <button class="button is-primary" type="submit">Save Changes</button>
+            <button class="button is-primary" type="submit">Create Post</button>
         </form>
     </div>
 @stop
