@@ -254,49 +254,6 @@
     </div>
 </section> <!-- End .qualities -->
 
-<section class="box process"> <!-- .process -->
-    <div class="columns process-wrapper">
-        <div class="column is-3 process-left">
-            <div class="process-left-heading">Our quick process</div>
-            <div class="process-left-text">The steps to get your loan</div>
-        </div>
-        <div class="column is-6 process-right">
-            <div class="process-section">
-                <div class="process-section-heading">Apply Online</div>
-                <div class="process-section-body">
-                    <p class="step-title">Under 10 minutes</p>
-                    <p class="step-subtitle">Check your eligibility in seconds, and complete our easy application to
-                        get your instant quote.</p>
-                </div>
-            </div>
-            <div class="process-section">
-                <div class="process-section-heading">Hear From Us</div>
-                <div class="process-section-body">
-                    <p class="step-title">Within 24 hours</p>
-                    <p class="step-subtitle">Your dedicated loan specialist is available to help you every step of
-                        the way with personalized service.</p>
-                </div>
-            </div>
-            <div class="process-section">
-                <div class="process-section-heading">Get A Decision</div>
-                <div class="process-section-body">
-                    <p class="step-title">In as fast as 24 hours</p>
-                    <p class="step-subtitle">Your underwriter will review your application and may schedule a quick
-                        call to get to know your business.</p>
-                </div>
-            </div>
-            <div class="process-section">
-                <div class="process-section-heading">You Get Funded</div>
-                <div class="process-section-body">
-                    <p class="step-title">In as soon as 24 hours</p>
-                    <p class="step-subtitle">Once approved, you’ll receive funds in your account within 24
-                        hours.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> <!-- End .process -->
-
 <section class="contact">
 
 </section>

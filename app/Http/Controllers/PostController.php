@@ -61,10 +61,10 @@ class PostController extends Controller
         $post->save();
         
         // Save tags
-        $tags = explode(',', $request->get('tags'));
+        $tags = json_decode($request->get('tags'));
         if (count($tags) > 0) {
-            foreach ($tags as $tag) {
-                $post->tags()->attach($tag);
+            foreach ($tags as $i => $tag) {
+                $post->tags()->attach($tag->id);
             }
         }
         
@@ -122,7 +122,7 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'required|unique:posts,title'.$id,
+            'title' => 'required|unique:posts,title,'.$id,
             'body'  => 'required'
         ]);
         $post = Post::findOrFail($id);
@@ -136,13 +136,14 @@ class PostController extends Controller
         $post->save();
         
         // Update tags
-        $tags = explode(',', $request->get('tags'));
+        $tags = json_decode($request->get('tags'));
         if (count($tags) > 0) {
             $post->tags()->detach();
-            foreach ($tags as $tag) {
-                $post->tags()->attach($tag);
+            foreach ($tags as $i => $tag) {
+                $post->tags()->attach($tag->id);
             }
         }
+        
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $newFilename = $post->getImageName() . '.' . $image->getClientOriginalExtension();

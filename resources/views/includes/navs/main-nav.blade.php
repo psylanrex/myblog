@@ -8,9 +8,9 @@
                     <div class="menu-content">
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="#">QA</a></li>
+                            <li><a href="/qa">FAQ</a></li>
                             <li><a href="/blog">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -22,16 +22,16 @@
                     <a href="/">Home</a>
                 </li>
                 <li class="level-item">
-                    <a href="">QA</a>
+                    <a href="/faq">FAQ</a>
                 </li>
                 <li class="level-item is-logo">
-                    <img src="https://s3-us-west-1.amazonaws.com/capital-direct-blog/main/eagle-skeleton-logo1.png" alt="logo">
+                    <img src="https://s3-us-west-1.amazonaws.com/capital-direct-blog/main/eagle-skeleton-logo2.png" alt="logo">
                 </li>
                 <li class="level-item">
                     <a href="/blog">Blog</a>
                 </li>
                 <li class="level-item">
-                    <a href="">Contact</a>
+                    <a href="/contact">Contact</a>
                 </li>
             </ul>
         </div>

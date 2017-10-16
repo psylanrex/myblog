@@ -43,15 +43,9 @@
                                     </div>
                                     <div class="field">
                                         <p class="label">Select Tags</p>
-                                        <input type="hidden" name="tags" :value="selectedTags">
-                                        <div class="columns is-multiline">
-                                            @foreach ($tags as $tag)
-                                                <div class="column is-one-quarter">
-                                                    <div class="field">
-                                                        <b-checkbox v-model="selectedTags" :native-value="{{ $tag->id }}">{{ $tag->name }}</b-checkbox>
-                                                    </div>
-                                                </div>
-                                            @endforeach
+                                        <input type="hidden" name="tags" :value="dbTags">
+                                        <div>
+                                            <multiselect v-model="selectedTags" :options="tags" label="name" track-by="id" :searchable="true" :multiple="true" :taggable="true" :hide-selected="true"></multiselect>
                                         </div>
                                     </div>
                                 </div>
@@ -67,10 +61,23 @@
 
 @section('scripts')
     <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'link code',
+            menubar: false,
+            toolbar: 'undo redo | styleselect | alignleft aligncenter alignright | bold italic | link image | fontselect',
+            font_formats: 'Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;AkrutiKndPadmini=Akpdmi-n'
+        });
         var app = new Vue({
             el: '#app',
             data: {
-                selectedTags: []
+                selectedTags: [],
+                tags: {!! $tags !!}
+            },
+            computed: {
+                dbTags: function() {
+                    return JSON.stringify(this.selectedTags);
+                }
             }
         })
     </script>

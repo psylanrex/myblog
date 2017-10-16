@@ -8,6 +8,7 @@
 
     <title>Capital Direct - Management</title>
     <link rel="stylesheet" href="/css/app.css">
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
 </head>
 <body>
 @include('includes.navs.main-nav')

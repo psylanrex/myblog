@@ -1,0 +1,50 @@
+.contact-wrapper {
+    margin: 2em 3em;
+    .contact-container {
+        margin: 5em;
+        #contact-info {
+            .contact-box {
+                padding: 25px;
+                margin-bottom: 30px;
+                border: 3px solid #eaeaea;
+                min-width: 200px;
+                .icon-box {
+                    background: #ffffff;
+                    float: left;
+                    width: 80px;
+                    margin-right: 40px;
+                    margin-top: -65px;
+                    color: #adadad;
+                    height: 60px;
+                    padding: 0 10px;
+                }
+                .contact-inner {
+                    margin-top: 15px;
+                }
+            }
+        }
+        #contact-form {
+            min-width: 450px;
+            form#application-form {
+                min-width: 450px;
+                .field {
+                    .control {
+                        input {
+                            height: 2.75em;
+                        }
+                        .select {
+                            width: 100%;
+                            select {
+                                width: 100%;
+                                height: 2.75em;
+                                option.placeholder {
+                                    color: #757575 !important;
+                                }
+                            }
+                        }
+                    }    
+                }
+            }
+        }
+    }
+}

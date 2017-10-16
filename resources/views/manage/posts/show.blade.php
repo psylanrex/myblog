@@ -19,7 +19,8 @@
                 <hr>
                 <div class="columns">
                     <div class="column">
-                        {{ $post->body }}
+                        {!! $post->body !!}
+                        <br>
                         <p>
                             @foreach ($post->tags as $tag)
                                 <a>#{{ $tag->name }} </a>
@@ -53,15 +54,4 @@
         </div>
         
     </div>
-@stop
-
-
-                    
-
-            
-            
-@section('scripts')
-    <script>
-        
-    </script>
 @stop

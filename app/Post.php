@@ -27,7 +27,7 @@ class Post extends Model
      */
     public function truncate($length)
     {
-        return substr($this->body, 0, $length) . "... ";
+        return substr(strip_tags($this->body), 0, $length) . "... ";
     }
     
     public function tags()
@@ -42,6 +42,6 @@ class Post extends Model
     
     public function scopePublished($query)
     {
-        return $query->where('published_at', '>=', date("Y-m-d H:i:s"));
+        return $query->where('published_at', '<=', date("Y-m-d H:i:s"));
     }
 }

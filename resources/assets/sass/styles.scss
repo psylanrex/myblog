@@ -30,7 +30,7 @@ header.main-nav {
               li {
                 padding: 10px 0;
                 a {
-                  color: $primary-green;
+                  color: $primary-blue;
                   font-family: 'Quicksand', sans-serif;
                   font-weight: bold;
                   text-transform: uppercase;
@@ -56,7 +56,7 @@ header.main-nav {
             }
           }
           a {
-            color: $primary-green;
+            color: $primary-blue;
             font-family: 'Quicksand', sans-serif;
             font-weight: bold;
             text-transform: uppercase;
@@ -112,15 +112,15 @@ header.main-nav {
             margin: auto;
             text-align: center;
             h2 {
-              //color: $primary-green;
+              //color: $primary-blue;
               font-family: 'Quicksand', sans-serif;
             }
             hr#about-us-divider {
-              background-color: $primary-green;
+              background-color: $primary-blue;
               width: 60%;
               margin: auto;
               margin-bottom: 25px;
-              border-bottom: 4px solid $primary-green;
+              border-bottom: 4px solid $primary-blue;
             }
           }
         }
@@ -162,26 +162,26 @@ header.main-nav {
         .column.is-one-third {
           min-width: 305px;
           .service-outer-container {
-            border-top: 5px solid $primary-green;
+            border-top: 5px solid $primary-blue;
             .service-container {
               border-width: 5px;
               border-style: solid;
-              -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from($primary-green), to(rgba(0, 0, 0, 0))) 1 100%;
-              -webkit-border-image: -webkit-linear-gradient($primary-green, rgba(0, 0, 0, 0)) 1 100%;
-              -moz-border-image: -moz-linear-gradient($primary-green, rgba(0, 0, 0, 0)) 1 100%;
-              -o-border-image: -o-linear-gradient($primary-green, rgba(0, 0, 0, 0)) 1 100%;
-              border-image: linear-gradient(to bottom, $primary-green, rgba(0, 0, 0, 0)) 1 100%;
+              -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from($primary-blue), to(rgba(0, 0, 0, 0))) 1 100%;
+              -webkit-border-image: -webkit-linear-gradient($primary-blue, rgba(0, 0, 0, 0)) 1 100%;
+              -moz-border-image: -moz-linear-gradient($primary-blue, rgba(0, 0, 0, 0)) 1 100%;
+              -o-border-image: -o-linear-gradient($primary-blue, rgba(0, 0, 0, 0)) 1 100%;
+              border-image: linear-gradient(to bottom, $primary-blue, rgba(0, 0, 0, 0)) 1 100%;
               .card {
                 padding: 15px;
                 box-shadow: none;
                 .card-header {
                   box-shadow: none;
                   hr.single-service-divider {
-                    background-color: $primary-green;
+                    background-color: $primary-blue;
                     width: 25%;
                     margin-top: 40px;
                     margin-left: -192px;
-                    border-bottom: 2px solid $primary-green;
+                    border-bottom: 2px solid $primary-blue;
                   }
                 }
                 .card-content {
@@ -190,7 +190,7 @@ header.main-nav {
                       list-style: none;
                       span.service-list-icon {
                         font-size: 0.5em;
-                        color: $primary-green;
+                        color: $primary-blue;
                         i.fa-star {
                           margin-top: 7px;
                           margin-left: -14px;
@@ -268,60 +268,6 @@ header.main-nav {
 
               }
             }
-          }
-        }
-      }
-    }
-  }
-}
-.process {
-  .process-wrapper {
-    background-color: $primary-green;
-    margin: 0 auto;
-    padding-top: 15px;
-    .process-left {
-      margin-top: 28%;
-      color: #ffffff;
-      .process-left-heading {
-        text-transform: uppercase;
-        font-family: 'Quicksand', sans-serif;
-        font-size: 1.3em;
-        font-weight: bold;
-      }
-    }
-    .process-right {
-      .process-section {
-        .process-section-heading {
-          position: relative;
-          text-transform: uppercase;
-          font-family: 'Quicksand', sans-serif;
-          color: #ffffff;
-          font-weight: bold;
-          font-size: 1.2em;
-          padding-left: 32px;
-          margin-bottom: 4px;
-          &:before {
-            content: '';
-            background-color: #ffffff;
-            border-radius: 50%;
-            height: 14px;
-            width: 14px;
-            margin-right: 24px;
-            position: absolute;
-            left: -6px;
-            top: 5px;
-          }
-        }
-        .process-section-body {
-          padding: 24px 0 64px 32px;
-          border-left: 1px solid #ffffff;
-          margin-bottom: 4px;
-          .step-title {
-            color: #ffffff;
-            font-size: 1.2em;
-          }
-          .step-subtitle {
-            color: #ffffff;
           }
         }
       }

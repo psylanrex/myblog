@@ -28,7 +28,7 @@
                             </div>
                             <div class="content">
                                 <p>
-                                    {{ $post->truncate(100) }}
+                                    {{ $post->truncate(250) }}
                                 </p>
                                 <p>
                                     @foreach ($post->tags as $tag)

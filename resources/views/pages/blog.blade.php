@@ -45,14 +45,19 @@
                                                             <a href="#">#{{ $tag->name }}</a> 
                                                         @endforeach
                                                     </p>
-                                                    <br>    
+                                                    <br>  
+                                                    <a href="/blog/{{ $post->slug }}" id="read-more">
+                                                        Read More
+                                                    </a>
                                                 </div>
                                             </div>    
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         @endforeach
+                        {{ $posts->links() }}
                     </div>
                     <div class="column is-one-quarter sidebar-container">
                         <div class="card-container" id="about-author">
