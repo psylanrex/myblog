@@ -22,8 +22,8 @@
                 <a href="/manage/users">Manage Users</a>
             </li>
             <li>
-                <a role="button">Roles &amp; Permissions</a>
-                <ul>
+                <a class="has-submenu">Roles &amp; Permissions</a>
+                <ul class="submenu">
                     <li><a href="{{ route('roles.index') }}">Roles</a></li>
                     <li><a href="{{ route('permissions.index') }}">Permissions</a></li>
                 </ul>
@@ -35,8 +35,8 @@
         </p>
         <ul class="menu-list">
             <li>
-                <a href="#">Posts</a>
-                <ul>
+                <a class="has-submenu">Posts</a>
+                <ul class="submenu">
                     <li>
                         <a href="{{ route('posts.index') }}">All Posts</a>
                     </li>
@@ -46,8 +46,8 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Tags</a>
-                <ul>
+                <a class="has-submenu">Tags</a>
+                <ul class="submenu">
                     <li>
                         <a href="{{ route('tags.index') }}">All Tags</a>
                     </li>

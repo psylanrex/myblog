@@ -773,7 +773,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(37);
+module.exports = __webpack_require__(38);
 
 
 /***/ }),
@@ -798,6 +798,9 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 // Vue multiselect
 
 Vue.component('multiselect', __WEBPACK_IMPORTED_MODULE_1_vue_multiselect___default.a);
+
+// js for manage pages
+__webpack_require__(37);
 
 // Vue.component('example', require('./components/Example.vue'));
 // var app = new Vue({
@@ -39520,6 +39523,27 @@ module.exports = Vue$3;
 
 /***/ }),
 /* 37 */
+/***/ (function(module, exports) {
+
+var hasSubmenu = document.getElementsByClassName('has-submenu');
+for (var i = 0; i < hasSubmenu.length; i++) {
+    hasSubmenu[i].onclick = function () {
+        this.classList.toggle('is-active');
+        var submenu = this.nextElementSibling;
+        if (submenu.style.maxHeight) {
+            submenu.style.maxHeight = null;
+            submenu.style.marginTop = null;
+            submenu.style.marginBottom = null;
+        } else {
+            submenu.style.maxHeight = submenu.scrollHeight + 'px';
+            submenu.style.marginTop = '0.75em';
+            submenu.style.marginBottom = '0.75em';
+        }
+    };
+}
+
+/***/ }),
+/* 38 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

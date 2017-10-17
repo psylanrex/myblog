@@ -8,6 +8,15 @@
     p.menu-label.is-aligned-center {
       margin: auto;
     }
+    .menu-list {
+        .submenu {
+          max-height: 0;
+          overflow: hidden;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      
+    }
   }
 }
 .management-area {

@@ -11,6 +11,9 @@ Vue.use(Buefy);
 import Multiselect from 'vue-multiselect'
 Vue.component('multiselect', Multiselect);
 
+// js for manage pages
+require('./manage');
+
 // Vue.component('example', require('./components/Example.vue'));
 // var app = new Vue({
 //     el: '#app',
