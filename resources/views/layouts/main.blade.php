@@ -12,5 +12,6 @@
 <body>
 @include('includes.navs.main-nav')
 @yield('content')
+@include('includes.footer.main')
 </body>
 </html>

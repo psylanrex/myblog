@@ -180,6 +180,7 @@ return [
         // Third party service providers
         Laratrust\LaratrustServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        DevMarketer\EasyNav\EasyNavServiceProvider::class,
     ],
 
     /*
@@ -230,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Laratrust'   => Laratrust\LaratrustFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Nav' => DevMarketer\EasyNav\EasyNavFacade::class,
     ],
 
 ];

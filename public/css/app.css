@@ -16907,6 +16907,10 @@ header.main-nav .navbar #navMainMenu ul li:last-child {
   margin: auto;
 }
 
+.side-menu .menu .menu-list a.is-active {
+  background-color: #189BD5;
+}
+
 .side-menu .menu .menu-list .submenu {
   max-height: 0;
   overflow: hidden;
@@ -17178,5 +17182,31 @@ header.main-nav .navbar #navMainMenu ul li:last-child {
 
 .contact-wrapper .contact-container #contact-form form#application-form .field .control .select select option.placeholder {
   color: #757575 !important;
+}
+
+footer.footer {
+  padding: 2em;
+  background-color: #189BD5;
+  margin-bottom: 2em;
+}
+
+footer.footer .footer-wrapper {
+  margin: auto;
+  color: #fff;
+  text-align: center;
+}
+
+footer.footer .footer-wrapper h3.is-title {
+  font-weight: bold;
+}
+
+footer.footer .footer-wrapper .icon-box {
+  display: inline-block;
+  padding: 0.5em 1em 1em 1em;
+}
+
+footer.footer .footer-wrapper .icon-box a {
+  color: #fff;
+  font-size: 2em;
 }
 

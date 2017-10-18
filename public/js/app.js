@@ -39526,20 +39526,62 @@ module.exports = Vue$3;
 /***/ (function(module, exports) {
 
 var hasSubmenu = document.getElementsByClassName('has-submenu');
-for (var i = 0; i < hasSubmenu.length; i++) {
+var countHasSubmenu = hasSubmenu.length;
+
+var _loop = function _loop() {
+    var keepParentActive = false;
+    var submenu = hasSubmenu[i].nextElementSibling;
+    keepSubmenuOpen(keepParentActive, hasSubmenu[i], submenu.children);
+    if (hasSubmenu[i].classList.contains('is-active')) {
+        setSubmenuStyles(submenu, submenu.scrollHeight, '0.75em');
+    }
+
     hasSubmenu[i].onclick = function () {
-        this.classList.toggle('is-active');
-        var submenu = this.nextElementSibling;
-        if (submenu.style.maxHeight) {
-            submenu.style.maxHeight = null;
-            submenu.style.marginTop = null;
-            submenu.style.marginBottom = null;
-        } else {
-            submenu.style.maxHeight = submenu.scrollHeight + 'px';
-            submenu.style.marginTop = '0.75em';
-            submenu.style.marginBottom = '0.75em';
+        var currentActive = document.getElementsByClassName('is-active');
+        for (var j = 0; j < currentActive.length; j++) {
+            currentActive[j].classList.remove('is-active');
         }
+        this.classList.toggle('is-active');
+        if (this.classList.contains('is-active')) {
+            setSubmenuStyles(submenu, submenu.scrollHeight, '0.75em');
+        } else {
+            setSubmenuStyles(submenu, null, '0');
+        }
+        keepSubmenuOpen(keepParentActive, this, submenu.children);
     };
+};
+
+for (var i = 0; i < countHasSubmenu; i++) {
+    _loop();
+}
+
+/**
+ * Creates style for submenu expansion or collapse
+ **/
+
+function setSubmenuStyles(submenu, maxHeight, margins) {
+    submenu.style.maxHeight = maxHeight + 'px';
+    submenu.style.marginTop = margins;
+    submenu.style.marginBottom = margins;
+}
+
+/**
+ * Keeps submenu open if an element of that submenu is active  
+ **/
+function keepSubmenuOpen() {
+    var keep = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+    var parent = arguments[1];
+    var children = arguments[2];
+
+    for (var m = 0; m < children.length; m++) {
+        if (children[m].firstElementChild.classList.contains('is-active')) {
+            keep = true;
+            break;
+        }
+    }
+    if (keep) {
+        parent.classList.add('is-active');
+    }
 }
 
 /***/ }),

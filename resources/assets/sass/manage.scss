@@ -9,6 +9,9 @@
       margin: auto;
     }
     .menu-list {
+      a.is-active {
+        background-color: $primary-blue;
+      }
         .submenu {
           max-height: 0;
           overflow: hidden;

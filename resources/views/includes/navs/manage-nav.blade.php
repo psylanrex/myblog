@@ -10,7 +10,7 @@
         </p>
         <ul class="menu-list">
             <li>
-                <a href="{{ route('manage.dashboard') }}">Dashboard</a>
+                <a href="{{ route('manage.dashboard') }}" class="{{ Nav::isRoute('manage.dashboard') }}">Dashboard</a>
             </li>
         </ul>
         <hr class="dropdown-divider">
@@ -19,13 +19,13 @@
         </p>
         <ul class="menu-list">
             <li>
-                <a href="/manage/users">Manage Users</a>
+                <a href="/manage/users" class="{{ Nav::isResource('users') }}">Manage Users</a>
             </li>
             <li>
-                <a class="has-submenu">Roles &amp; Permissions</a>
+                <a class="has-submenu" class="{{ Nav::hasSegment(['roles', 'permissions'], 2) }}">Roles &amp; Permissions</a>
                 <ul class="submenu">
-                    <li><a href="{{ route('roles.index') }}">Roles</a></li>
-                    <li><a href="{{ route('permissions.index') }}">Permissions</a></li>
+                    <li><a href="{{ route('roles.index') }}" class="{{ Nav::isResource('roles') }}">Roles</a></li>
+                    <li><a href="{{ route('permissions.index') }}" class="{{ Nav::isResource('permissions') }}">Permissions</a></li>
                 </ul>
             </li>
         </ul>
@@ -35,24 +35,24 @@
         </p>
         <ul class="menu-list">
             <li>
-                <a class="has-submenu">Posts</a>
+                <a class="has-submenu" class="{{ Nav::isResource('posts') }}">Posts</a>
                 <ul class="submenu">
                     <li>
-                        <a href="{{ route('posts.index') }}">All Posts</a>
+                        <a href="{{ route('posts.index') }}" class="{{ Nav::isRoute('posts.index') }}">All Posts</a>
                     </li>
                     <li>
-                        <a href="{{ route('posts.create') }}">Create New Post</a>
+                        <a href="{{ route('posts.create') }}" class="{{ Nav::isRoute('posts.create') }}">Create New Post</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a class="has-submenu">Tags</a>
+                <a class="has-submenu" class="{{ Nav::isResource('tags') }}">Tags</a>
                 <ul class="submenu">
                     <li>
-                        <a href="{{ route('tags.index') }}">All Tags</a>
+                        <a href="{{ route('tags.index') }}" class="{{ Nav::isRoute('tags.index') }}">All Tags</a>
                     </li>
                     <li>
-                        <a href="{{ route('tags.create') }}">Create New Tag</a>
+                        <a href="{{ route('tags.create') }}" class="{{ Nav::isRoute('tags.create') }}">Create New Tag</a>
                     </li>
                 </ul>
             </li>

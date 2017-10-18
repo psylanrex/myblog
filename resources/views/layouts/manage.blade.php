@@ -19,7 +19,7 @@
         @yield('content')
     </div>
 </div>
-
+@include('includes.footer.main')
 <!-- Scripts -->
 <script src="{{ asset('/js/app.js') }}"></script>
 @yield('scripts')
