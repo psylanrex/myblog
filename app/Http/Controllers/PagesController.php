@@ -14,7 +14,7 @@ class PagesController extends Controller
     
     public function blog()
     {
-        $posts = Post::with('tags')->published()->orderBy('published_at', 'desc')->paginate(4);
+        $posts = Post::with('tags')->published()->orderBy('published_at', 'desc')->paginate(3);
         return view('pages.blog', compact('posts'));
     }
     

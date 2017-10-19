@@ -17,10 +17,12 @@
 
 .blog-container {
   margin-top: 5%;
+  margin-bottom: 12px;
   .blog-body {
     border-top: 1px solid #ddd;
     .main-content-container {
       border-right: 1px solid #ddd;
+      padding-bottom: 25px;
       .columns {
         .column {
           border-bottom: 1px solid #ddd;

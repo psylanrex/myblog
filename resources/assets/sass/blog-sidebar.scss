@@ -1,0 +1,29 @@
+.sidebar-container {
+  padding: 0;
+  .card-container {
+    padding: 5% 2%;
+    border-bottom: 1px solid #ddd;
+    .card {
+      box-shadow: none;
+      .card-header {
+        box-shadow: none;
+        .card-header-container {
+          margin: auto;
+          text-align: center;
+          p {
+            text-transform: uppercase;
+            border: 2px solid #363636;
+          }
+        }
+      }
+      .card-content {
+        .content {
+          margin-top: 5%;
+          p {
+            font-size: 0.83em;
+          }
+        }
+      }
+    }
+  }
+}

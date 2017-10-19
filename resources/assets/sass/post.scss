@@ -1,0 +1,28 @@
+.post-title {
+  padding: 30px;
+  .title-container {
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.post-hero {
+  max-height: 350px;
+  margin: 0 2%;
+  .image img {
+    height: 350px;
+    margin: auto;
+  }
+}
+
+.post-container {
+  margin-top: 5%;
+  margin-bottom: 12px;
+  .content-container {
+    border-top: 1px solid #ddd;
+    .post-body {
+      border-right: 1px solid #ddd;
+      padding-bottom: 65px;
+    }
+  }
+}

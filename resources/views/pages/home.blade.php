@@ -11,8 +11,8 @@
                             Business Loan and Merchant Solutions
                         </h1>
                         <p>
-                            <a class="button is-outlined" role="button">
-                                Learn More
+                            <a class="button is-outlined" role="button" href="/contact">
+                                Apply Now
                             </a>
                         </p>
                     </div>
@@ -253,10 +253,6 @@
         </div>
     </div>
 </section> <!-- End .qualities -->
-
-<section class="contact">
-
-</section>
 
 @stop
 

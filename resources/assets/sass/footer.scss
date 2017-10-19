@@ -1,21 +1,36 @@
-footer.footer {
-    padding: 2em;
-    background-color: $primary-blue;
-    margin-bottom: 2em;
-    .footer-wrapper {
-        margin: auto;
+footer {
+    padding: 0;
+    .footer-social-media {
+        padding: 2em;
         color: #fff;
+        background-color: $primary-blue;
+        margin: auto;
         text-align: center;
-        h3.is-title {
-            font-weight: bold;
+        .connect-title {
+            display: inline-block;
+            padding: 0 1em;
+            vertical-align: middle;
+            margin-top: -13px;
+            h3.is-title {
+                font-weight: bold;
+            }
         }
         .icon-box {
             display: inline-block;
-            padding: 0.5em 1em 1em 1em;
+            padding: 0 0.8em;
             a {
                 color: #fff;
                 font-size: 2em;
             }
+        }
+    }
+    .footer-copyright {
+        background-color: #fff;
+        margin: auto;
+        text-align: center;
+        p {
+            color: $primary-blue;
+            font-size: 0.8em;
         }
     }
 }
