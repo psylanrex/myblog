@@ -2,23 +2,19 @@
 
 @section('content')
     <div class="container-fluid contact-wrapper">
-        <section class="contact-title">
-            <div class="title-container">
-                <h2 class="title">Contact Us</h2>
-            </div>
-        </section>
-        <section class="box map">
+        
+        <section class="map">
             <div class="card">
-                <div class="card-header">
-                    <div class="card-header-title">Map</div>
+                <div class="card-content">
+                    <div id="google-map" style="height:300px;"></div>
                 </div>
-                <div class="card-content"></div>
             </div>
         </section>
+        @include('includes.notifications.form-message')
         <section class="contact-container">
             <div class="columns">
                 <div class="column"></div>
-                <div class="column is-three-quarters ">
+                <div class="column is-three-quarters">
                     <div class="columns">   
                         <div class="column is-one-third" id="contact-info">
                             <div class="columns">
@@ -63,7 +59,7 @@
                             </div>
                         </div>  
                         <div class="column is-two-thirds" id="contact-form">
-                            <form action="" method="POST" id="application-form">
+                            <form action="/" method="POST" id="application-form">
                                 {{ csrf_field() }}
                                 <div class="columns">
                                     <div class="column is-half">
@@ -111,10 +107,11 @@
                                         <div class="field">
                                             <div class="control">
                                                 <div class="select">
-                                                    <select name="state" id="state">
+                                                    <select name="state_id" id="state">
                                                         <option value="" class="placeholder">Select a state</option>
-                                                        <option value="1">CA</option>
-                                                        <option value="2">AZ</option>
+                                                        @foreach ($states as $state)
+                                                            <option value="{{ $state->id }}">{{ $state->name }}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
@@ -123,7 +120,7 @@
                                     <div class="column is-third">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="zipcode" class="input" placeholder="Zipcode" />
+                                                <input type="text" name="zip_code" class="input" placeholder="Zipcode" />
                                             </p>
                                         </div>
                                     </div>
@@ -148,14 +145,14 @@
                                     <div class="column is-half">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="amount" class="input" placeholder="Loan Amount Requested" />
+                                                <input type="text" name="loan_amount" class="input" placeholder="Loan Amount Requested" />
                                             </p>
                                         </div>
                                     </div>
                                     <div class="column is-half">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="how_soon" class="input" placeholder="How Soon Do You Need The Money?" />
+                                                <input type="text" name="need_timeframe" class="input" placeholder="How Soon Do You Need The Money?" />
                                             </p>
                                         </div>
                                     </div>
@@ -165,10 +162,11 @@
                                         <div class="field">
                                             <div class="control">
                                                 <div class="select">
-                                                    <select name="reason" id="reason">
+                                                    <select name="reason_id" id="reason">
                                                         <option value="" class="placeholder">How would you use the loan?</option>
-                                                        <option value="1">Reason 1</option>
-                                                        <option value="2">Reason 2</option>
+                                                        @foreach ($reasons as $reason)
+                                                            <option value="{{ $reason->id }}">{{ $reason->name }}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>    
@@ -190,5 +188,24 @@
             </div>
         </section>
     </div>
-    
+@stop
+
+@section('scripts')
+    <script>
+        function initMap() {
+            var myLatLng = {lat: 33.691756, lng: -117.829176};
+            var map = new google.maps.Map(document.getElementById('google-map'), {
+                zoom: 16,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Capital Direct'
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASB6e1gJxqH_IarieQqt1b-DtwKWsQ1v8&callback=initMap"
+  type="text/javascript"></script>
 @stop

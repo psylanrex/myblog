@@ -2,14 +2,6 @@
 
 @section('content')
 <div class="fluid-container faq-wrapper">
-    <section class="box calculator">
-        <div class="card">
-            <div class="card-header">
-                <div class="card-header-title">Loan Calculator</div>
-            </div>
-            <div class="card-content"></div>
-        </div>
-    </section>
     <div class="columns">
         <div class="column is-one-third">
             <div class="process"> <!-- .process -->

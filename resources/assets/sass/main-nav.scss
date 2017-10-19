@@ -1,0 +1,83 @@
+header.main-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 900;
+  top: 0;
+  .navbar {
+    background-color: #f1f1f1;
+    height: 70px;
+    .navbar-brand {
+      .burger {
+        @media screen and (max-width: 1025px) {
+          display: block;
+          margin-left: 20px;
+          .dropdown-menu {
+            display: block;
+            top: 10px;
+            left: 0;
+            label.navbar-burger {
+              background-color: #f1f1f1;
+              cursor: pointer;
+              border: none;
+              margin-left: 0;
+              margin-top: 5px;
+              height: 3rem;
+              h3#menu-logo {
+                margin-left: 27px;
+                margin-top: -23px;
+              }
+            }
+            input#menu {
+              display: none;
+              &:checked ~ .menu-content {
+                max-height: 1000px;
+                transition: all ease 0.5s;
+                background-color: #f1f1f1;
+                border-bottom: 2px solid #ddd;
+                box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+                margin-left: 0px;
+                margin-top: 3px;
+                z-index: 999;
+              }
+            }
+            .menu-content {
+              max-height: 0;
+              overflow: hidden;
+              ul {
+                list-style: none;
+                padding: 10px 0 0;
+                li {
+                  padding: 10px 40px;
+                  border-bottom: 1px solid #ddd;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #navMainMenu {
+      ul {
+        width: 100%;
+        li {
+          height: 70px;
+          border-right: 1px solid #bcb7b2;
+          &.is-logo {
+            img {
+              max-height: 70px;
+            }
+          }
+          a {
+            color: $primary-blue;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}

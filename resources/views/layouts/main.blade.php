@@ -13,5 +13,6 @@
 @include('includes.navs.main-nav')
 @yield('content')
 @include('includes.footer.main')
+@yield('scripts')
 </body>
 </html>

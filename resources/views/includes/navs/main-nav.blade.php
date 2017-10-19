@@ -1,14 +1,17 @@
 <header class="main-nav"> {{--container for nav--}}
     <nav class="navbar">
         <div class="navbar-brand">
-            <div class="navbar-burger burger">
+            <div class="burger">
                 <div class="dropdown-menu">
                     <input type="checkbox" id="menu" name="menu-toggle"/>
-                    <label for="menu"><i class="fa fa-2x fa-bars" aria-hidden="true"></i></label>
+                    <label class="button navbar-burger" id="burger-icon" for="menu">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <h3 id="menu-logo">Capital Direct</h3>
+                    </label>
                     <div class="menu-content">
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="/qa">FAQ</a></li>
+                            <li><a href="/faq">FAQ</a></li>
                             <li><a href="/blog">Blog</a></li>
                             <li><a href="/contact">Contact</a></li>
                         </ul>
