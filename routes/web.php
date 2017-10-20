@@ -12,7 +12,8 @@
 */
 
 Route::get('/', 'PagesController@home');
-Route::get('/blog', 'PagesController@blog');
+Route::get('/blog', 'PagesController@blog')->name('blog');
+Route::get('/blog/search', 'PagesController@searchBlog');
 Route::get('/faq', 'PagesController@faq');
 Route::get('/contact', 'PagesController@contact');
 Route::post('/', 'PagesController@saveApplication');
@@ -24,6 +25,7 @@ Route::group(['prefix' => 'manage', 'middleware' => 'role:superadministrator|adm
     Route::get('/', 'ManageController@index');
     Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
     Route::resource('/users', 'UserController');
+    Route::resource('/customers', 'CustomerController', ['except' => 'destroy']);
     Route::resource('/permissions', 'PermissionController', ['except' => 'destroy']);
     Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
     Route::resource('/posts', 'PostController');

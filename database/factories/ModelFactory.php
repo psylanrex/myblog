@@ -25,8 +25,10 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Post::class, function (Faker\Generator $faker) {
     $create_time = $faker->dateTimeBetween($startDate = '-1 year', $endDate = 'now', $timezone = date_default_timezone_get());
+    $title = $faker->sentence($nbWords = 6, $variableNbWords = true);
     return [
-        'title' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+        'title' => $title,
+        'slug' => strtolower(implode('-', explode(' ', $title))),
         'body' => $faker->paragraphs($nb = 3, $asText = true),
         'published_at' => $faker->dateTimeBetween($startDate = $create_time, $endDate = 'now', $timezone = date_default_timezone_get()),
         'created_at' => $create_time,

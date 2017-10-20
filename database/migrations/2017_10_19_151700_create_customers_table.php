@@ -20,14 +20,19 @@ class CreateCustomersTable extends Migration
             $table->string('business_name');
             $table->string('business_address');
             $table->string('city');
-            $table->integer('state_id');
+            $table->integer('state_id')->unsigned();
             $table->string('zip_code', 10);
             $table->string('phone', 12);
             $table->string('email');
             $table->string('loan_amount');
             $table->string('need_timeframe');
-            $table->integer('reason_id');
+            $table->integer('reason_id')->unsigned();
             $table->timestamps();
+        });
+        
+        Schema::table('customers', function (Blueprint $table) {
+            $table->foreign('state_id')->references('id')->on('states');
+            $table->foreign('reason_id')->references('id')->on('reasons');
         });
     }
 

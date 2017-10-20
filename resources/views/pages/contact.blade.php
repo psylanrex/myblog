@@ -65,14 +65,14 @@
                                     <div class="column is-half">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="first_name" class="input" placeholder="First Name" />
+                                                <input type="text" name="first_name" class="input" placeholder="First Name" value="{{ old('first_name') }}" />
                                             </p>
                                         </div>
                                     </div>
                                     <div class="column is-half">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="last_name" class="input" placeholder="Last Name" />
+                                                <input type="text" name="last_name" class="input" placeholder="Last Name" value="{{ old('last_name') }}" />
                                             </p>
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@
                                     <div class="column">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="business_name" class="input" placeholder="Legal Business Name" />
+                                                <input type="text" name="business_name" class="input" placeholder="Legal Business Name"  value="{{ old('business_name') }}" />
                                             </p>
                                         </div>
                                     </div>
@@ -90,7 +90,7 @@
                                     <div class="column">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="business_address" class="input" placeholder="Business Address" />
+                                                <input type="text" name="business_address" class="input" placeholder="Business Address"  value="{{ old('business_address') }}" />
                                             </p>
                                         </div>
                                     </div>
@@ -99,7 +99,7 @@
                                     <div class="column is-third">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="city" class="input" placeholder="City" />
+                                                <input type="text" name="city" class="input" placeholder="City" value="{{ old('city') }}" />
                                             </p>
                                         </div>
                                     </div>
@@ -110,7 +110,7 @@
                                                     <select name="state_id" id="state">
                                                         <option value="" class="placeholder">Select a state</option>
                                                         @foreach ($states as $state)
-                                                            <option value="{{ $state->id }}">{{ $state->name }}</option>
+                                                            <option value="{{ $state->id }}" @if(old('state_id') == $state->id) selected @endif>{{ $state->name }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
@@ -120,7 +120,7 @@
                                     <div class="column is-third">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="zip_code" class="input" placeholder="Zipcode" />
+                                                <input type="text" name="zip_code" class="input" placeholder="Zipcode" value="{{ old('zip_code') }}" />
                                             </p>
                                         </div>
                                     </div>
@@ -129,14 +129,14 @@
                                     <div class="column is-half">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="phone" class="input" placeholder="Phone" />
+                                                <input type="text" name="phone" class="input" placeholder="Phone" value="{{ old('phone') }}" />
                                             </p>
                                         </div>
                                     </div>
                                     <div class="column is-half">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="email" name="email" class="input" placeholder="Email" />
+                                                <input type="email" name="email" class="input" placeholder="Email" value="{{ old('email') }}" />
                                             </p>
                                         </div>
                                     </div>
@@ -145,14 +145,14 @@
                                     <div class="column is-half">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="loan_amount" class="input" placeholder="Loan Amount Requested" />
+                                                <input type="text" name="loan_amount" class="input" placeholder="Loan Amount Requested" value="{{ old('loan_amount') }}" />
                                             </p>
                                         </div>
                                     </div>
                                     <div class="column is-half">
                                         <div class="field">
                                             <p class="control">
-                                                <input type="text" name="need_timeframe" class="input" placeholder="How Soon Do You Need The Money?" />
+                                                <input type="text" name="need_timeframe" class="input" placeholder="How Soon Do You Need The Money?" value="{{ old('need_timeframe') }}" />
                                             </p>
                                         </div>
                                     </div>

@@ -1,4 +1,22 @@
-<div class="card-container" id="about-author">
+<div id="search-box">
+    <form action="/blog/search" method="GET">
+        <div class="field has-addons">
+            <div class="control has-icons-right">
+                <input class="input" type="text" name=search_phrase placeholder="Find a post">
+                <span class="icon is-small is-right">
+                    <i class="fa fa-search"></i>
+                </span>
+            </div>
+            <div class="control">
+                <button class="button is-default" type="submit">
+                  Search
+                </button>
+            </div>
+        </div>
+    </form>
+    
+</div>
+<div id="about-author">
     <div class="card">
         <div class="card-header">
             <div class="card-header-container">
@@ -19,46 +37,4 @@
         </div>
     </div>
 </div>
-<div class="card-container" id="suggestions">
-    <div class="card">
-        <div class="card-header">
-            <div class="card-header-container">
-                <p class="card-header-title">Suggestions</p>
-            </div>    
-        </div>
-        <div class="card-content">
-            <div class="content">
-                <a class="panel-block is-active">
-                    <span class="panel-icon">
-                      <i class="fa fa-book"></i>
-                    </span>
-                    bulma
-                  </a>
-                  <a class="panel-block">
-                    <span class="panel-icon">
-                      <i class="fa fa-book"></i>
-                    </span>
-                    marksheet
-                  </a>
-                  <a class="panel-block">
-                    <span class="panel-icon">
-                      <i class="fa fa-book"></i>
-                    </span>
-                    minireset.css
-                  </a>
-                  <a class="panel-block">
-                    <span class="panel-icon">
-                      <i class="fa fa-book"></i>
-                    </span>
-                    jgthms.github.io
-                  </a>
-                  <a class="panel-block">
-                    <span class="panel-icon">
-                      <i class="fa fa-code-fork"></i>
-                    </span>
-                    daniellowtw/infboard
-                  </a>
-            </div>
-        </div>
-    </div>
-</div>
+

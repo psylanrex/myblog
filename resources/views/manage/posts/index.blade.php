@@ -39,8 +39,8 @@
                                 <p>Created at: {{ $post->created_at }}</p>
                                 <p>Published at: {{ $post->published_at }}</p>
                                 <hr>
-                                <a class="button is-info" href="{{ route('posts.show', $post->id) }}">View</a>
-                                <button class="button is-primary">View in Blog</button>
+                                <a class="button is-info" href="{{ route('posts.edit', $post->id) }}">View</a>
+                                <a class="button is-primary" href="/blog/{{ $post->slug }}" target="_blank">View in Blog</a>
                             </div>
                         </div>
                     </div>

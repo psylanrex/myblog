@@ -16974,6 +16974,12 @@ header.main-nav .navbar #navMainMenu ul li:last-child {
   padding-bottom: 25px;
 }
 
+.blog-container .blog-body .main-content-container .no-post-message {
+  margin: auto;
+  padding: 5em;
+  text-align: center;
+}
+
 .blog-container .blog-body .main-content-container .columns .column {
   border-bottom: 1px solid #ddd;
 }
@@ -17013,68 +17019,81 @@ header.main-nav .navbar #navMainMenu ul li:last-child {
   padding: 0;
 }
 
-.sidebar-container .card-container {
+.sidebar-container #search-box {
+  padding: 10% 5%;
+}
+
+.sidebar-container #about-author {
   padding: 5% 2%;
   border-bottom: 1px solid #ddd;
 }
 
-.sidebar-container .card-container .card {
+.sidebar-container #about-author .card {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.sidebar-container .card-container .card .card-header {
+.sidebar-container #about-author .card .card-header {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.sidebar-container .card-container .card .card-header .card-header-container {
+.sidebar-container #about-author .card .card-header .card-header-container {
   margin: auto;
   text-align: center;
 }
 
-.sidebar-container .card-container .card .card-header .card-header-container p {
+.sidebar-container #about-author .card .card-header .card-header-container p {
   text-transform: uppercase;
   border: 2px solid #363636;
 }
 
-.sidebar-container .card-container .card .card-content .content {
+.sidebar-container #about-author .card .card-content .content {
   margin-top: 5%;
 }
 
-.sidebar-container .card-container .card .card-content .content p {
+.sidebar-container #about-author .card .card-content .content p {
   font-size: 0.83em;
 }
 
-.post-title {
+.post-wrapper {
+  margin-top: 5em;
+}
+
+.post-wrapper .post-title {
   padding: 30px;
 }
 
-.post-title .title-container {
+.post-wrapper .post-title .title-container {
   margin: auto;
   text-align: center;
 }
 
-.post-hero {
-  max-height: 350px;
-  margin: 0 2%;
+.post-wrapper .post-title .title-container h3.subtitle {
+  font-size: 1em;
+  margin-top: 0;
 }
 
-.post-hero .image img {
+.post-wrapper .post-hero {
+  max-height: 350px;
+  margin: 1% 12%;
+}
+
+.post-wrapper .post-hero .image img {
   height: 350px;
   margin: auto;
 }
 
-.post-container {
+.post-wrapper .post-container {
   margin-top: 5%;
   margin-bottom: 12px;
 }
 
-.post-container .content-container {
+.post-wrapper .post-container .content-container {
   border-top: 1px solid #ddd;
 }
 
-.post-container .content-container .post-body {
+.post-wrapper .post-container .content-container .post-body {
   border-right: 1px solid #ddd;
   padding-bottom: 65px;
 }

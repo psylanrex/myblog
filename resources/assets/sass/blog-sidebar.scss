@@ -1,6 +1,9 @@
 .sidebar-container {
   padding: 0;
-  .card-container {
+  #search-box {
+    padding: 10% 5%;
+  }
+  #about-author {
     padding: 5% 2%;
     border-bottom: 1px solid #ddd;
     .card {

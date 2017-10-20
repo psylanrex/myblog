@@ -22,6 +22,9 @@
                 <a href="/manage/users" class="{{ Nav::isResource('users') }}">Manage Users</a>
             </li>
             <li>
+                <a href="/manage/customers" class="{{ Nav::isResource('customers') }}">Manage Customers</a>
+            </li>
+            <li>
                 <a class="has-submenu" class="{{ Nav::hasSegment(['roles', 'permissions'], 2) }}">Roles &amp; Permissions</a>
                 <ul class="submenu">
                     <li><a href="{{ route('roles.index') }}" class="{{ Nav::isResource('roles') }}">Roles</a></li>

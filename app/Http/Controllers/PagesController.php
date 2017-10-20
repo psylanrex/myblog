@@ -42,17 +42,25 @@ class PagesController extends Controller
     
     public function saveApplication(Request $request)
     {
-        $this->validate($request, [
-            'first_name'        => 'required',
-            'last_name'         => 'required',
-            'business_name'     => 'required',
-            'business_address'  => 'required',
-            'city'              => 'required',
-            'state_id'          => 'required',
-            'city'              => 'required',
-            'zip_code'          => 'required',
-            'reason_id'         => 'required'
-        ]);
+        $this->validate(
+            $request, 
+            [
+                'first_name'        => 'required',
+                'last_name'         => 'required',
+                'business_name'     => 'required|unique:customers,business_name',
+                'business_address'  => 'required',
+                'city'              => 'required',
+                'state_id'          => 'required',
+                'zip_code'          => 'required',
+                'phone'             => 'required|unique:customers,phone',
+                'email'             => 'required|unique:customers,email',
+                'loan_amount'       => 'numeric',
+                'reason_id'         => 'required'
+            ],
+            [
+                'unique'    => 'Your :attribute indicates that you may have contacted us. Please call so we can better assist you.'    
+            ]
+        );
         $data = [
             'first_name'        => $request->get('first_name'),
             'last_name'         => $request->get('last_name'),
@@ -70,5 +78,24 @@ class PagesController extends Controller
         Customer::create($data);
         Session::flash('success', 'We have received your requrest and will get back with you shortly. Thank you for contacting Capital Direct!');
         return redirect()->back();
+    }
+    
+    /**
+     * Performs search function on blog page
+     **/
+    public function searchBlog(Request $request) 
+    {
+        $search_phrase = $request->get('search_phrase');
+        $posts = [];
+        if ($search_phrase) {
+            $posts = Post::where(function($query) use($search_phrase) {
+                $words = array_filter(explode(' ', $search_phrase));
+                foreach ($words as $index => $word) {
+                    $word = '%' . $word . '%';
+                    $query = $query->where('title', 'LIKE', $word)->orWhere('body', 'LIKE', $word);
+                }
+            })->paginate(3);
+        }
+        return view('pages.blog', compact('posts'));
     }
 }

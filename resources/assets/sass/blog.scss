@@ -23,6 +23,11 @@
     .main-content-container {
       border-right: 1px solid #ddd;
       padding-bottom: 25px;
+      .no-post-message {
+        margin: auto;
+        padding: 5em;
+        text-align: center;
+      }
       .columns {
         .column {
           border-bottom: 1px solid #ddd;
