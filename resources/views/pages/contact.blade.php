@@ -16,7 +16,7 @@
                 <div class="column"></div>
                 <div class="column is-three-quarters">
                     <div class="columns">   
-                        <div class="column is-one-third" id="contact-info">
+                        <div class="column" id="contact-info">
                             <div class="columns">
                                 <div class="column">
                                     <div class="contact-box">
@@ -58,7 +58,7 @@
                                 </div>
                             </div>
                         </div>  
-                        <div class="column is-two-thirds" id="contact-form">
+                        <div class="column" id="contact-form">
                             <form action="/" method="POST" id="application-form">
                                 {{ csrf_field() }}
                                 <div class="columns">
@@ -108,7 +108,7 @@
                                             <div class="control">
                                                 <div class="select">
                                                     <select name="state_id" id="state">
-                                                        <option value="" class="placeholder">Select a state</option>
+                                                        <option value="" class="placeholder">State</option>
                                                         @foreach ($states as $state)
                                                             <option value="{{ $state->id }}" @if(old('state_id') == $state->id) selected @endif>{{ $state->name }}</option>
                                                         @endforeach

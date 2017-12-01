@@ -27,20 +27,30 @@
             }
         }
         #contact-form {
+            min-width: 350px;
             form#application-form {
                 .field {
                     .control {
                         input {
                             height: 2.75em;
+                            &::placeholder { /* Firefox 19+ */
+                              color: #363636;
+                            }
+                            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                              color: #363636;
+                            }
+                            &:-moz-placeholder { /* Firefox 19+ */
+                              color: #363636;
+                            }
+                            &:-ms-input-placeholder { /* IE 10+ */
+                              color: #363636;
+                            }
                         }
                         .select {
                             width: 100%;
                             select {
                                 width: 100%;
                                 height: 2.75em;
-                                option.placeholder {
-                                    color: #757575 !important;
-                                }
                             }
                         }
                     }    

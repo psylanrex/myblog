@@ -8,7 +8,6 @@
             </div>
         </div>
         <hr>
-        
         <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="columns">

@@ -7,7 +7,10 @@ use App\Post;
 use App\State;
 use App\Reason;
 use App\Customer;
+use App\User;
 use Illuminate\Support\Facades\Session;
+use App\Notifications\NewCustomerAdmin;
+use Notification;
 
 class PagesController extends Controller
 {
@@ -75,7 +78,14 @@ class PagesController extends Controller
             'need_timeframe'    => $request->get('need_timeframe'),
             'reason_id'         => $request->get('reason_id')
         ];
-        Customer::create($data);
+        $customer = Customer::create($data);
+        if ( ! $customer) {
+            Session::flash('danger', 'Your application was not saved. Please fill in the form again. Thank you.');
+            return redirect()->back();
+        }
+        // $admin = User::isSuperManager();
+        // $admin->notify(new NewCustomerAdmin($customer));
+        Notification::route('mail', 'mkha813@yahoo.com')->notify(new NewCustomerAdmin($customer));
         Session::flash('success', 'We have received your requrest and will get back with you shortly. Thank you for contacting Capital Direct!');
         return redirect()->back();
     }

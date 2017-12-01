@@ -17237,8 +17237,42 @@ header.main-nav .navbar #navMainMenu ul li:last-child {
   margin-top: 15px;
 }
 
+.contact-wrapper .contact-container #contact-form {
+  min-width: 350px;
+}
+
 .contact-wrapper .contact-container #contact-form form#application-form .field .control input {
   height: 2.75em;
+}
+
+.contact-wrapper .contact-container #contact-form form#application-form .field .control input::-webkit-input-placeholder {
+  /* Firefox 19+ */
+  color: #363636;
+}
+
+.contact-wrapper .contact-container #contact-form form#application-form .field .control input:-ms-input-placeholder {
+  /* Firefox 19+ */
+  color: #363636;
+}
+
+.contact-wrapper .contact-container #contact-form form#application-form .field .control input::placeholder {
+  /* Firefox 19+ */
+  color: #363636;
+}
+
+.contact-wrapper .contact-container #contact-form form#application-form .field .control input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #363636;
+}
+
+.contact-wrapper .contact-container #contact-form form#application-form .field .control input:-moz-placeholder {
+  /* Firefox 19+ */
+  color: #363636;
+}
+
+.contact-wrapper .contact-container #contact-form form#application-form .field .control input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #363636;
 }
 
 .contact-wrapper .contact-container #contact-form form#application-form .field .control .select {
@@ -17248,10 +17282,6 @@ header.main-nav .navbar #navMainMenu ul li:last-child {
 .contact-wrapper .contact-container #contact-form form#application-form .field .control .select select {
   width: 100%;
   height: 2.75em;
-}
-
-.contact-wrapper .contact-container #contact-form form#application-form .field .control .select select option.placeholder {
-  color: #757575 !important;
 }
 
 footer {
